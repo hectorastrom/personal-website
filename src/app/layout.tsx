@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
+import localFont from "next/font/local"
 import { Inter } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800"] });
+export const inter = Inter({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800"] });
+export const regards = localFont({ src: "../../public/fonts/regards.ttf" });
 
 export const metadata: Metadata = {
   title: "Hector's Page",
@@ -16,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${inter.className} bg-rose-50 text-zinc-900 antialiased`}>{children}</body>
     </html>
   );
 }
