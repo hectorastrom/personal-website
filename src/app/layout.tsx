@@ -1,14 +1,11 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local"
-import { Inter } from "next/font/google";
 import "./globals.css";
-
-export const inter = Inter({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800"] });
-export const regards = localFont({ src: "../../public/fonts/regards.ttf" });
+import { inter } from "../../public/fonts/fonts";
+import Sidenav from "@/components/sidenav";
 
 export const metadata: Metadata = {
-  title: "Hector's Page",
-  description: "The main page of my website!",
+  title: "Hector Astrom",
+  description: "Hector's Personal Website",
 };
 
 export default function RootLayout({
@@ -18,7 +15,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-rose-50 text-zinc-900 antialiased`}>{children}</body>
+      <body
+        className={`${inter.className} bg-gradient-to-b from-rose-50 to-rose-100 text-zinc-900 antialiased mx-auto max-w-full h-screen mt-10`}
+      >
+        <div className="flex flex-row justify-center items-center">
+          <div className="flex-none"><Sidenav /></div>
+          <div className="w-1/12 md:w-20"></div>
+          <div className="">{children}</div>
+        </div>
+      </body>
     </html>
   );
 }
