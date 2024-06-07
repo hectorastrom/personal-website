@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <>
       <h1
-        className={`font-title text-6xl md:text-7xl lg:text-8xl font-bold text-rose-400 mt-5 `}
+        className={`font-title text-6xl md:text-7xl lg:text-8xl font-bold text-emphasis mt-5 `}
       >
         Hector Astrom
       </h1>

@@ -16,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} bg-gradient-to-b from-rose-50 to-rose-100 text-zinc-900 antialiased mx-auto max-w-full h-screen mt-10`}
+        className={`${inter.className} bg-gradient-to-b from-rose-50 to-rose-100 text-default antialiased mx-auto max-w-full h-screen mt-10`}
       >
         <div className="flex flex-row justify-center items-center">
           <div className="flex-none"><Sidenav /></div>

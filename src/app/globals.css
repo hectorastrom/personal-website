@@ -19,7 +19,7 @@ body::before {
 }
 
 .link {
-  @apply text-rose-500 font-bold font-title
+  @apply text-emphasis font-bold font-title
 }
 
 @layer utilities {

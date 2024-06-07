@@ -1,15 +1,17 @@
 import Image from "next/image";
 import Link from "next/link";
+import HorDivider from "./divider";
+import Handles from "./handles";
 
 export default function Sidenav() {
   return (
     <>
-      <div className="grid grid-rows-8 grid-flow-col">
+      <div className="grid grid-rows-9 grid-flow-col">
         <div className="row-span-4">
           <div className="relative w-36 h-36 md:w-44 md:h-44 lg:w-56 lg:h-56">
             <Image
               src="/images/me.png"
-              alt="Picture of Hector"
+              alt="Picture of Hector from September 2023"
               width={500} // Default width, doesn't matter
               height={500} // Default height
               className="object-contain w-full h-full"
@@ -17,7 +19,10 @@ export default function Sidenav() {
             />
           </div>
         </div>
-        <ul className={`text-4xl row-span-4 pl-2 mt-10`}>
+        <div className="row-span-1 mt-4">
+          <Handles />
+        </div>
+        <ul className="text-3xl row-span-4 pl-2 mx-4">
           <li>
             <Link className="link" href="/">
               About
