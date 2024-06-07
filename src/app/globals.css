@@ -2,36 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: #000000;
-  --background-start-rgb: #fff7e1;
-  --background-end-rgb: #fff5de;
-}
-
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 100;
-  }
-} */
-
-html,
-body {
-  height: 100%; 
-  margin: 0;
-  padding: 0;
-  font-weight: 500;
+@font-face {
+  font-family: 'TitleFont';
+  src: url('/fonts/title.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 body {
-  color: var(--foreground-rgb);
-  /* For uniform color */
-  background-color: var(--background-start-rgb);
-  /* For gradient color */
-  /* background: linear-gradient(to bottom,
-      transparent,
-      var(--background-end-rgb)) var(--background-start-rgb); */
+  /* cursor: url("../../public/images/wii_cursor.png"), auto; */
+}
+
+body::before {
+  background: inherit;
+  /* filter: url('/noiseFilter.svg#noiseFilter'); */
+}
+
+.link {
+  @apply text-emphasis font-bold font-title
 }
 
 @layer utilities {
