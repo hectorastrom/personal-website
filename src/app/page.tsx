@@ -3,7 +3,7 @@ export default function Home() {
     <>
       <div className="relative inline-block shimmer-container">
         <h1
-          className={`font-title text-6xl lg:text-8xl font-bold text-emphasis shimmer-text`}
+          className={`font-title text-6xl p-0 m-0 lg:text-8xl font-bold text-emphasis shimmer-text`}
         >
           Hector Astrom
         </h1>

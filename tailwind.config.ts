@@ -10,8 +10,8 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        "default": "#64748b",
-        "emphasis": "#14428B",
+        "default": "#334155", // slate-700
+        "emphasis": "#14428B", // shirt color
       },
       fontFamily: {
         'title': ['TitleFont', ...defaultTheme.fontFamily.sans],

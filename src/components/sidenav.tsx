@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import Handles from "./handles";
+import Handles from "./Handles";
 
-export default function Sidenav() {
+export default function SideNav() {
   return (
     <>
       <div className="grid grid-rows-9 grid-flow-col">
