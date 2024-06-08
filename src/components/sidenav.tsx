@@ -28,7 +28,7 @@ export default function SideNav() {
         <div className="row-span-1 mt-3">
           <Handles />
         </div>
-        <ul className="text-3xl row-span-4 pl-2 mx-4 mt-2">
+        <ul className="text-3xl row-span-4 mt-2">
           {[
             { href: "/", label: "About" },
             { href: "/projects", label: "Projects" },

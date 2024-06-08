@@ -20,7 +20,7 @@ export default function RootLayout({
       >
         <div className="px-10 pt-4 sm:pt-16 pb-24 sm:pb-36 sm:grid sm:grid-cols-[max-content,minmax(0,36rem)] sm:justify-center sm:gap-x-12">
           <ResponsiveNav />
-          <main className={`pl-4 sm:pl-0 mt-4`}>
+          <main className={`pl-4 sm:pl-0 mt-6`}>
             <div>{children}</div>
           </main>
         </div>

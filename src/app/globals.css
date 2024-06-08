@@ -22,6 +22,7 @@ body::before {
   /* filter: url('/noiseFilter.svg#noiseFilter'); */
 }
 
+
 /* Link Highlighting, courtesy of Albert */
 
 .highlight-color::after {
