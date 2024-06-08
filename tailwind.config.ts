@@ -11,7 +11,7 @@ const config: Config = {
     extend: {
       colors: {
         "default": "#64748b",
-        "emphasis": "#fb7185",
+        "emphasis": "#14428B",
       },
       fontFamily: {
         'title': ['TitleFont', ...defaultTheme.fontFamily.sans],
