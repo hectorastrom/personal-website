@@ -1,8 +1,15 @@
+"use client";
+
+import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import Handles from "./Handles";
 
 export default function SideNav() {
+  const pathname = usePathname();
+
+  const isActive = (href: string) => pathname === href;
+
   return (
     <>
       <div className="grid grid-rows-9 grid-flow-col">
@@ -22,26 +29,23 @@ export default function SideNav() {
           <Handles />
         </div>
         <ul className="text-3xl row-span-4 pl-2 mx-4 mt-2">
-          <li>
-            <Link className="link" href="/">
-              About
-            </Link>
-          </li>
-          <li>
-            <Link className="link" href="/projects">
-              Projects
-            </Link>
-          </li>
-          <li>
-            <Link className="link" href="/work">
-              Experience
-            </Link>
-          </li>
-          <li>
-            <Link className="link" href="/blog">
-              Blog
-            </Link>
-          </li>
+          {[
+            { href: "/", label: "About" },
+            { href: "/projects", label: "Projects" },
+            { href: "/work", label: "Experience" },
+            { href: "/blog", label: "Blog" },
+          ].map((link) => (
+            <li key={link.href}>
+              <Link
+                href={link.href}
+                className={`
+                text-emphasis font-bold font-title hover:saturate-200
+                ${isActive(link.href) ? "underline decoration-pink-500/60 decoration-3" : ""}`}
+              >
+                {link.label}
+              </Link>
+            </li>
+          ))}
         </ul>
       </div>
     </>
