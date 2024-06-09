@@ -32,7 +32,7 @@ export default function SideNav() {
           {[
             { href: "/", label: "About" },
             { href: "/projects", label: "Projects" },
-            { href: "/work", label: "Experience" },
+            { href: "/work", label: "Work" },
             { href: "/blog", label: "Blog" },
           ].map((link) => (
             <li key={link.href}>
