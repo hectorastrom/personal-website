@@ -2,36 +2,39 @@
 
 import Image from "next/image";
 import Handles from "./Handles";
-import TopNavLinks from "./TopNavLinks";
+import NavLinks from "./NavLinks";
 
 export default function TopNav() {
   return (
-    <div className="w-full bg-white shadow-lg p-4 flex items-center">
+    <div className="w-full bg-white shadow-lg p-4 grid grid-cols-4 items-center">
       {/* Image Section */}
-      <div className="relative w-28 h-28 sm:w-32 sm:h-32 mr-4 sm:mr-6 flex-shrink-0">
-        <Image
-          src="/images/me.png"
-          alt="Picture of Hector from September 2023"
-          width={500}
-          height={500}
-          className="object-contain rounded-full w-full h-full"
-          priority={true}
-        />
+      <div className="row-span-2 col-span-1 flex justify-center">
+        <div className="relative w-24 h-24 sm:w-28 sm:h-28">
+          <Image
+            src="/images/me.png"
+            alt="Picture of Hector from September 2023"
+            width={500}
+            height={500}
+            className="object-contain w-full h-full"
+            priority={true}
+          />
+        </div>
       </div>
 
-      {/* Links and Handles Section */}
-      <div className="flex-grow">
-        <div className="font-title text-2xl sm:text-3xl font-bold text-pink-500">
-          Hector Astrom
-        </div>
-        <div className="-mt-3 w-full">
-          {/* Wrapper to align both TopNavLinks and Handles */}
-          <div className="inline-block">
-            <TopNavLinks />
-            <div className="mt-4">
-              <Handles />
-            </div>
+      {/* Name and Handles Section */}
+      <div className="ml-2 my-2 col-span-3 flex flex-col justify-center">
+        <div className="flex flex-wrap sm:flex-row items-center justify-between w-full">
+          <h3 className="font-title text-2xl sm:text-3xl font-bold text-emphasis">
+            Hector Astrom
+          </h3>
+          <div className="mb-1">
+            <Handles />
           </div>
+        </div>
+
+        {/* Navigation Links Section */}
+        <div className="w-full">
+          <NavLinks layout="top" />
         </div>
       </div>
     </div>
