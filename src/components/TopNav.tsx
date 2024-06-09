@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Handles from "./Handles";
 import NavLinks from "./NavLinks";
+import NameTitle from "./NameTitle";
 
 export default function TopNav() {
   return (
@@ -24,9 +25,7 @@ export default function TopNav() {
       {/* Name and Handles Section */}
       <div className="ml-2 my-2 col-span-3 flex flex-col justify-center">
         <div className="flex flex-wrap sm:flex-row items-center justify-between w-full">
-          <h3 className="font-title text-2xl sm:text-3xl font-bold text-emphasis">
-            Hector Astrom
-          </h3>
+          <NameTitle/>
           <div className="mb-1">
             <Handles />
           </div>

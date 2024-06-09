@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Handles from "./Handles";
 import NavLinks from "./NavLinks";
+import NameTitle from "./NameTitle";
 
 export default function SideNav() {
   return (
@@ -20,9 +21,9 @@ export default function SideNav() {
             />
           </div>
         </div>
-        <h3 className="font-title text-center text-2xl sm:text-3xl font-bold text-emphasis mt-2">
-          Hector Astrom
-        </h3>
+        <div className="mt-1 text-center">
+          <NameTitle/>
+        </div>
         <div className="row-span-1 -mt-2">
           <Handles />
         </div>
