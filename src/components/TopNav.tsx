@@ -6,7 +6,7 @@ import TopNavLinks from "./TopNavLinks";
 
 export default function TopNav() {
   return (
-    <div className="w-full bg-white shadow-lg p-4 flex items-center h-fit">
+    <div className="w-full bg-white shadow-lg p-4 flex items-center">
       {/* Image Section */}
       <div className="relative w-28 h-28 sm:w-32 sm:h-32 mr-4 sm:mr-6 flex-shrink-0">
         <Image
