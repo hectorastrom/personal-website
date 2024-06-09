@@ -1,22 +1,18 @@
+import NameTitle from "@/components/NameTitle";
+
 export default function Home() {
   return (
     <>
-      <div className="relative inline-block shimmer-container">
-        <h1
-          className={`font-title text-7xl font-bold text-emphasis shimmer-text`}
-        >
-          Hector Astrom
-        </h1>
+      <div className="flex flex-col gap-6">
+        <NameTitle text="Hi!" />
+        <p>
+          I'm Hector, a rising sophomore at{" "}
+          <a className="highlight-color" href="https://www.eecs.mit.edu/">
+            MIT
+          </a>{" "}
+          studying Computer Science & Electrical Engineering.
+        </p>
       </div>
-      <p className="text-md">Backend Developer</p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        
-      </p>
     </>
   );
 }

@@ -8,7 +8,7 @@
 
 @font-face {
   font-family: 'TitleFont';
-  src: url('/fonts/gochihand.ttf') format('truetype');
+  src: url('/fonts/gochihand.ttf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
@@ -26,7 +26,7 @@ body::before {
 /* Link Highlighting, courtesy of Albert */
 
 .highlight-color::after {
-  background-color: rgba(255, 123, 0, 0.4);
+  background-color: rgba(236, 72, 153, .5);
 }
 
 
@@ -36,6 +36,7 @@ a {
   text-decoration: none;
   display: inline-block;
   padding: 0 2px;
+  font-weight: bold;
 }
 
 /* Create the translucent underline */
@@ -56,15 +57,15 @@ a::after {
 
 }
 
-.custom-link:hover {
+a:hover {
   color: black;
 }
 
-.custom-link:hover::after {
+a:hover::after {
   bottom: 17%;
   height: 69%;
   /* Engulfing the text */
-  border-radius: 5px;
+  border-radius: 4px;
   /* Rounded corners when engulfing */
 }
 
