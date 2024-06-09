@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { ReactNode } from "react";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
@@ -12,20 +11,20 @@ interface IconLinkProps {
 // Reusable IconLink component with typed props
 function IconLink({ href, children }: IconLinkProps) {
   return (
-    <Link
+    <a
       href={href}
       className="hover:text-emphasis hover:saturate-200"
       target={href.startsWith("http") ? "_blank" : "_self"}
     >
       {children}
-    </Link>
+    </a>
   );
 }
 
 export default function Handles() {
   return (
-    <div className="flex flex-row justify-around gap-6 border-emphasis border-opacity-75 border-2 rounded-md shadow-md p-1 text-primary text-3xl">
-      <IconLink href="mailto://hastrom@mit.edu">
+    <div className="flex justify-between md:p-1 border-none md:border-solid md:border-emphasis md:border-opacity-75 md:border-2 rounded-md md:shadow-md text-primary text-2xl sm:text-3xl">
+      <IconLink href="mailto:hastrom@mit.edu">
         <MdEmail />
       </IconLink>
       <IconLink href="https://github.com/hectorastrom">

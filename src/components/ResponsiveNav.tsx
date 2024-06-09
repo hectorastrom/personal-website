@@ -4,10 +4,10 @@ import TopNav from "@/components/TopNav";
 export default function ResponsiveNav() {
   return (
     <>
-      <div className="hidden sm:block fixed sm:relative left-4 sm:left-0">
+      <div className="hidden md:block fixed md:relative left-4 md:left-0">
         <SideNav />
       </div>
-      <div className="sm:hidden w-full fixed top-0 left-0 z-10">
+      <div className="md:hidden w-screen fixed top-0 left-0 z-10">
         <TopNav />
       </div>
     </>
