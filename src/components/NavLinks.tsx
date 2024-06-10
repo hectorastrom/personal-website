@@ -33,7 +33,7 @@ export default function NavLinks({ layout }: NavLinksProps) {
               text-emphasis font-normal hover:saturate-200
               ${
                 isActive(link.href)
-                  ? "underline decoration-pink-500/60 decoration-3"
+                  ? "underline decoration-accent decoration-3"
                   : ""
               }`}
           >

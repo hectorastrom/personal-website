@@ -12,6 +12,7 @@ const config: Config = {
       colors: {
         "default": "#334155", // slate-700
         "emphasis": "#14428B", // shirt color
+        "accent": "rgba(219, 39, 119, .3)" // rose-500
       },
       fontFamily: {
         'title': ['TitleFont', ...defaultTheme.fontFamily.sans],
