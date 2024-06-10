@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800"] });
+import { bodyFont } from "../../public/fonts/fonts";
+import ResponsiveNav from "@/components/ResponsiveNav";
 
 export const metadata: Metadata = {
-  title: "Hector's Page",
-  description: "The main page of my website!",
+  title: "Hector Astrom",
+  description: "Hector's Personal Website",
 };
 
 export default function RootLayout({
@@ -16,7 +15,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body
+        className={`${bodyFont.className} bg-gradient-to-b from-slate-50 to-slate-100 text-xl text-default antialiased mx-auto max-w-full min-h-screen mt-28 overflow-auto`}
+      >
+        <div className="px-10 pb-24 grid grid-rows-2 md:pb-36 md:grid md:grid-cols-[max-content,minmax(0,36rem)] md:justify-center md:gap-x-12">
+          <ResponsiveNav />
+          <main className="pl-4 sm:pl-0">
+            <div className="mt-14 sm:mt-18 md:mt-8">{children}</div>
+          </main>
+        </div>
+      </body>
     </html>
   );
 }
