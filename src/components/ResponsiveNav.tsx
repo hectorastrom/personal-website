@@ -1,5 +1,5 @@
-import SideNav from "@/components/SideNav";
-import TopNav from "@/components/TopNav";
+import SideNav from "./SideNav";
+import TopNav from "./TopNav";
 
 export default function ResponsiveNav() {
   return (
