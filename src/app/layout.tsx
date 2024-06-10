@@ -16,7 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${bodyFont.className} bg-gradient-to-b from-slate-50 to-slate-100 text-xl text-default antialiased mx-auto max-w-full h-screen w-screen mt-28 overflow-auto`}
+        className={`${bodyFont.className} bg-gradient-to-b from-slate-50 to-slate-100 text-xl text-default antialiased mx-auto max-w-full min-h-screen mt-28 overflow-auto`}
       >
         <div className="px-10 pb-24 grid grid-rows-2 md:pb-36 md:grid md:grid-cols-[max-content,minmax(0,36rem)] md:justify-center md:gap-x-12">
           <ResponsiveNav />
