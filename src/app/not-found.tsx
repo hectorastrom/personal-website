@@ -12,7 +12,7 @@ export default function NotFound() {
           <h3 className="text-xl">
             Uh oh! <span className="custom-link">{`hectorastrom${pathname}`}</span> does not exist.
           </h3>
-          <Link href="/" className="m-10 custom-link font-bold text-4xl">Take me home!</Link>
+          <Link href="/" className="m-10 custom-link font-bold text-4xl">Return home</Link>
         </div>
       </>
     );

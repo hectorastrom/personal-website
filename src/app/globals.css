@@ -131,6 +131,31 @@ body::before {
   -webkit-text-fill-color: transparent;
 } */
 
+.hammer-animation {
+  display: inline-block;
+  animation: hammer 1s infinite;
+}
+
+@keyframes hammer {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  10% {
+    transform: rotate(50deg);
+    animation-timing-function: ease-in;
+  }
+
+  60% {
+    transform: rotate(0deg);
+    animation-timing-function: ease-out;
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
