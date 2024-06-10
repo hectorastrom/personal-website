@@ -14,9 +14,6 @@
   font-style: normal;
 }
 
-body {
-  /* cursor: url("../../public/images/wii_cursor.png"), auto; */
-}
 
 body::before {
   background: inherit;

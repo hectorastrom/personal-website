@@ -10,7 +10,7 @@ export default function Home() {
           <NameTitle text="Hey there!" />
         </div>
         <p>
-          I'm Hector, a rising sophomore at{" "}
+          I&apos;m Hector, a sophomore at{" "}
           <a
             className="custom-link"
             target="_blank"
@@ -23,7 +23,7 @@ export default function Home() {
 
         <p>
           My main interest lies at the intersection of machine learning and
-          healthcare. I'm also a{" "}
+          healthcare. I&apos;m also a{" "}
           <a
             className="custom-link"
             target="_blank"
@@ -35,7 +35,7 @@ export default function Home() {
         </p>
 
         <span>
-          Come see what I'm up to this{" "}
+          Come see what I&apos;m up to this{" "}
           <Link href={"/projects"} className="custom-link">
             summer,
           </Link>{" "}
