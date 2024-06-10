@@ -1,6 +1,6 @@
 "use client";
 
-import Handles from "./Handles";
+import Handles from "./Handles1";
 import NavLinks from "./NavLinks";
 import NameTitle from "./NameTitle";
 import MeImg from "./MeImg";

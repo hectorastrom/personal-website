@@ -1,4 +1,4 @@
-import SideNav from "./SideNav";
+import SideNav from "./SideNav1";
 import TopNav from "./TopNav";
 
 export default function ResponsiveNav() {
