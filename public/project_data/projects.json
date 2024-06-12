@@ -1,0 +1,30 @@
+[
+  {
+    "id": "cri",
+    "image_name": "cri.png",
+    "name": "CRInteractive",
+    "date": "2021-2023",
+    "description": "Platform to quantify and track rowing performance metrics",
+    "rowStart": "row-start-1",
+    "colStart": "col-start-1",
+    "rowEnd": "row-end-4",
+    "colEnd": "col-end-4",
+    "tags": ["flask", "full-stack", "python"],
+    "github": "https://github.com/hectorastrom/CRInteractive",
+    "website": "https://www.crinteractive.org/"
+  },
+  {
+    "id": "tim",
+    "image_name": "tim.png",
+    "name": "TiM",
+    "date": "2023",
+    "description": "Adds dynamic audio soundscapes to your books",
+    "rowStart": "row-start-1",
+    "colStart": "col-start-5",
+    "rowEnd": "row-end-3",
+    "colEnd": "col-end-8",
+    "tags": ["openai", "react", "spotify"],
+    "github": "https://github.com/Brotherswords/HackMIT2023",
+    "devpost": "https://devpost.com/software/tim-text-into-music"
+  }
+]
