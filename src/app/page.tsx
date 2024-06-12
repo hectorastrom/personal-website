@@ -22,8 +22,9 @@ export default function Home() {
         </p>
 
         <p>
-          My main interest lies at the intersection of machine learning and
-          healthcare. I&apos;m also a{" "}
+          My main interest lies at the intersection of{" "}
+          <span className="italic">machine learning</span> and
+          <span className="italic"> healthcare</span>. I&apos;m also a{" "}
           <a
             className="custom-link"
             target="_blank"
