@@ -3,6 +3,7 @@ import "./globals.css";
 import { bodyFont } from "../../public/fonts/fonts";
 import ResponsiveNav from "@/components/ResponsiveNav";
 
+
 export const metadata: Metadata = {
   title: "Hector Astrom",
   description: "Hector's Personal Website",
