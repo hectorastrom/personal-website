@@ -36,7 +36,7 @@ interface Project {
   devpost?: string;
 }
 
-const Page = async () => {
+export default async function Page() {
   // Read the JSON file
   const filePath = path.join(
     process.cwd(),
@@ -58,10 +58,10 @@ const Page = async () => {
   return (
     <div className="grid grid-flow-row grid-cols-1 sm:grid-cols-2 gap-4">
       {projects.map((project) => (
-        <HoverCard key={project.id} className={`h-full card`} id={project.id}>
+        <HoverCard key={project.id} id={project.id}>
           <Card key={project.id} className={`h-full`} id={project.id}>
             <CardHeader>
-              <div className="flex flex-row justify-between items-center space-x-4">
+              <div className="flex flex-row justify-between items-center space-x-1">
                 <CardTitle>{project.name}</CardTitle>
                 <div className="h-12 w-12 md:h-14 md:w-14 rounded-xl border-2 border-default/25">
                   <Image
@@ -92,5 +92,3 @@ const Page = async () => {
     </div>
   );
 };
-
-export default Page;

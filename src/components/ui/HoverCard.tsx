@@ -47,7 +47,7 @@ const HoverCard: React.FC<HoverCardProps> = ({
   return (
     <div
       ref={cardRef}
-      className={`relative h-full transition-transform ease-out duration-300 ${className}`}
+      className={`relative h-full rounded-lg card transition-transform ease-out duration-300 ${className}`}
       {...props}
     >
       {children}

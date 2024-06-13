@@ -85,7 +85,7 @@ body::before {
 /* card floating animation */
 .card {
   position: relative;
-  transition: transform 0.1s ease, box-shadow 0.3s ease;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
   will-change: transform;
 }
 

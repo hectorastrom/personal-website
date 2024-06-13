@@ -29,7 +29,7 @@
       "image_name": "tim.png",
       "name": "Text into Music",
       "date": "2023",
-      "description": "Web app that adds bespoke audio soundscapes to your books", 
+      "description": "Web app that layers bespoke audio soundscapes to your books", 
       "tags": ["openai", "react", "spotify"],
       "github": "https://github.com/Brotherswords/HackMIT2023",
       "devpost": "https://devpost.com/software/tim-text-into-music"
