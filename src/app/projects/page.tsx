@@ -6,6 +6,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import HoverCard from "@/components/ui/HoverCard";
 import Image from "next/image";
 import fs from "fs";
 import path from "path";
@@ -57,42 +58,36 @@ const Page = async () => {
   return (
     <div className="grid grid-flow-row grid-cols-1 sm:grid-cols-2 gap-4">
       {projects.map((project) => (
-        <Card
-          key={project.id}
-          className={``}
-          id={project.id}
-        >
-          <CardHeader>
-            <div className="flex flex-row justify-between items-center space-x-4">
-              <CardTitle>
-                {project.name}
-              </CardTitle>
-              <div className="h-12 w-12 md:h-14 md:w-14 rounded-xl border-2 border-default/25">
-                <Image
-                  src={`/project_data/images/${project.image_name}`}
-                  alt={project.name}
-                  width={100}
-                  height={100}
-                  className="object-contain w-full h-full rounded-xl"
-                />
+        <HoverCard key={project.id} className={`h-full card`} id={project.id}>
+          <Card key={project.id} className={`h-full`} id={project.id}>
+            <CardHeader>
+              <div className="flex flex-row justify-between items-center space-x-4">
+                <CardTitle>{project.name}</CardTitle>
+                <div className="h-12 w-12 md:h-14 md:w-14 rounded-xl border-2 border-default/25">
+                  <Image
+                    src={`/project_data/images/${project.image_name}`}
+                    alt={project.name}
+                    width={100}
+                    height={100}
+                    className="object-contain w-full h-full rounded-xl"
+                  />
+                </div>
               </div>
-            </div>
-            <CardDescription>{project.date}</CardDescription>
-          </CardHeader>
-          <CardContent>
-              {project.description}
-          </CardContent>
-          <CardFooter className="flex flex-wrap">
-            {project.tags.map((tag) => (
-              <span
-                key={tag}
-                className="mr-2 mb-2 bg-gray-200 rounded-full px-2 py-1 text-xs md:text-sm lg:text-base"
-              >
-                {tag}
-              </span>
-            ))}
-          </CardFooter>
-        </Card>
+              <CardDescription>{project.date}</CardDescription>
+            </CardHeader>
+            <CardContent className="">{project.description}</CardContent>
+            <CardFooter className="flex flex-wrap">
+              {project.tags.map((tag) => (
+                <span
+                  key={tag}
+                  className="mr-2 mb-2 bg-gray-200 rounded-full px-2 py-1 text-xs md:text-sm lg:text-base"
+                >
+                  {tag}
+                </span>
+              ))}
+            </CardFooter>
+          </Card>
+        </HoverCard>
       ))}
     </div>
   );

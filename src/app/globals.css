@@ -82,6 +82,18 @@ body::before {
   width: 100%;
 }
 
+/* card floating animation */
+.card {
+  position: relative;
+  transition: transform 0.1s ease, box-shadow 0.3s ease;
+  will-change: transform;
+}
+
+.card:hover {
+  z-index: 10;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
 /* Shimmer implementation -- never got to work */
 
 /* @keyframes shimmer {
