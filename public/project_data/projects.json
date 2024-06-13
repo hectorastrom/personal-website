@@ -20,7 +20,7 @@
       "name": "CRInteractive",
       "date": "2021-2023",
       "description": "Platform to quantify and track rowing performance metrics",
-      "tags": ["flask", "full-stack", "python"],
+      "tags": ["Python", "Flask", "SQLite"],
       "github": "https://github.com/hectorastrom/CRInteractive",
       "website": "https://www.crinteractive.org/"
     },
@@ -30,7 +30,7 @@
       "name": "Text into Music",
       "date": "2023",
       "description": "Web app that layers bespoke audio soundscapes to your books", 
-      "tags": ["openai", "react", "spotify"],
+      "tags": ["OpenAI", "React", "Spotify"],
       "github": "https://github.com/Brotherswords/HackMIT2023",
       "devpost": "https://devpost.com/software/tim-text-into-music"
     },
@@ -40,7 +40,7 @@
       "name": "stud",
       "date": "2023",
       "description": "Web app and chrome extension for building smarter study habits", 
-      "tags": ["nextjs", "tailwind", "chrome-api"],
+      "tags": ["NextJS", "Tailwind", "Chrome-API"],
       "github": "https://github.com/albertastrom/stud",
       "devpost": "https://devpost.com/software/stud-the-study-bud"
     },
@@ -50,7 +50,7 @@
       "name": "This Website!",
       "date": "2024",
       "description": "Active NextJS & React portfolio site", 
-      "tags": ["nextjs", "tailwind"],
+      "tags": ["NextJS", "Tailwind"],
       "github": "https://github.com/hectorastrom/personal-website",
       "website": "https://hectorastrom.com"
     }
