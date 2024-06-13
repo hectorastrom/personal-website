@@ -19,54 +19,77 @@ interface Project {
   description: string;
   rowStart: string;
   colStart: string;
-  rowEnd: string;
-  colEnd: string;
+  rowSpan: string;
+  colSpan: string;
+  smRowStart: string;
+  smColStart: string;
+  smRowSpan: string;
+  smColSpan: string;
+  mdRowStart: string;
+  mdColStart: string;
+  mdRowSpan: string;
+  mdColSpan: string;
   tags: string[];
-  github: string;
-  website : string;
-  devpost : string;
+  github?: string;
+  website?: string;
+  devpost?: string;
 }
 
 const Page = async () => {
   // Read the JSON file
-  const filePath = path.join(process.cwd(), "public", "project_data", "projects.json");
+  const filePath = path.join(
+    process.cwd(),
+    "public",
+    "project_data",
+    "projects.json"
+  );
   const fileContents = fs.readFileSync(filePath, "utf8");
-  const projects: Project[] = JSON.parse(fileContents);
+  const data = JSON.parse(fileContents);
+
+  const defaults = data.defaults;
+  const projects: Project[] = data.projects.map(
+    (project: Partial<Project>) => ({
+      ...defaults,
+      ...project,
+    })
+  );
 
   return (
-    <div className="grid grid-flow-col gap-4">
+    <div className="grid grid-flow-row grid-cols-1 sm:grid-cols-2 gap-4">
       {projects.map((project) => (
         <Card
           key={project.id}
-          className={`${project.rowStart} ${project.colStart} ${project.rowEnd} ${project.colEnd}`}
+          className={``}
           id={project.id}
         >
           <CardHeader>
-            <CardTitle>
-              <div className="flex flex-row justify-between items-center">
+            <div className="flex flex-row justify-between items-center space-x-4">
+              <CardTitle>
                 {project.name}
-                <div className="h-12 w-12 md:h-182 md:w-18 rounded-full border-2">
-                  <Image
-                    src={`/project_data/images/${project.image_name}`}
-                    alt={project.name}
-                    width={100}
-                    height={100}
-                    className="object-contain w-full h-full rounded-full"
-                  />
-                </div>
+              </CardTitle>
+              <div className="h-12 w-12 md:h-14 md:w-14 rounded-xl border-2 border-default/25">
+                <Image
+                  src={`/project_data/images/${project.image_name}`}
+                  alt={project.name}
+                  width={100}
+                  height={100}
+                  className="object-contain w-full h-full rounded-xl"
+                />
               </div>
-            </CardTitle>
-
+            </div>
             <CardDescription>{project.date}</CardDescription>
           </CardHeader>
           <CardContent>
-            <p>{project.description}</p>
+              {project.description}
           </CardContent>
-          <CardFooter>
+          <CardFooter className="flex flex-wrap">
             {project.tags.map((tag) => (
-                <>
-                <span key={tag}>{tag}, </span>
-                </>
+              <span
+                key={tag}
+                className="mr-2 mb-2 bg-gray-200 rounded-full px-2 py-1 text-xs md:text-sm lg:text-base"
+              >
+                {tag}
+              </span>
             ))}
           </CardFooter>
         </Card>

@@ -1,30 +1,58 @@
-[
-  {
-    "id": "cri",
-    "image_name": "cri.png",
-    "name": "CRInteractive",
-    "date": "2021-2023",
-    "description": "Platform to quantify and track rowing performance metrics",
-    "rowStart": "row-start-1",
-    "colStart": "col-start-1",
-    "rowEnd": "row-end-4",
-    "colEnd": "col-end-4",
-    "tags": ["flask", "full-stack", "python"],
-    "github": "https://github.com/hectorastrom/CRInteractive",
-    "website": "https://www.crinteractive.org/"
+{
+  "defaults": {
+    "rowStart": "row-auto",
+    "colStart": "col-auto",
+    "rowSpan": "row-span-1",
+    "colSpan": "col-span-1",    
+    "smRowSpan": "sm:row-span-1",
+    "smColSpan": "sm:col-span-1",
+    "mdRowSpan": "md:row-span-1",
+    "mdColSpan": "md:col-span-1",
+    "smRowStart": "sm:row-auto",
+    "smColStart": "sm:col-auto",
+    "mdRowStart": "md:row-auto",
+    "mdColStart": "md:col-auto"
   },
-  {
-    "id": "tim",
-    "image_name": "tim.png",
-    "name": "TiM",
-    "date": "2023",
-    "description": "Adds dynamic audio soundscapes to your books",
-    "rowStart": "row-start-1",
-    "colStart": "col-start-5",
-    "rowEnd": "row-end-3",
-    "colEnd": "col-end-8",
-    "tags": ["openai", "react", "spotify"],
-    "github": "https://github.com/Brotherswords/HackMIT2023",
-    "devpost": "https://devpost.com/software/tim-text-into-music"
-  }
-]
+  "projects": [
+    {
+      "id": "cri",
+      "image_name": "cri.png",
+      "name": "CRInteractive",
+      "date": "2021-2023",
+      "description": "Platform to quantify and track rowing performance metrics",
+      "tags": ["flask", "full-stack", "python"],
+      "github": "https://github.com/hectorastrom/CRInteractive",
+      "website": "https://www.crinteractive.org/"
+    },
+    {
+      "id": "tim",
+      "image_name": "tim.png",
+      "name": "Text into Music",
+      "date": "2023",
+      "description": "Web app that adds bespoke audio soundscapes to your books", 
+      "tags": ["openai", "react", "spotify"],
+      "github": "https://github.com/Brotherswords/HackMIT2023",
+      "devpost": "https://devpost.com/software/tim-text-into-music"
+    },
+    {
+      "id": "stud",
+      "image_name": "stud.png",
+      "name": "stud",
+      "date": "2023",
+      "description": "Web app and chrome extension for building smarter study habits", 
+      "tags": ["nextjs", "tailwind", "chrome-api"],
+      "github": "https://github.com/albertastrom/stud",
+      "devpost": "https://devpost.com/software/stud-the-study-bud"
+    },
+    {
+      "id": "portfolio",
+      "image_name": "borderless_portfolio.png",
+      "name": "This Website!",
+      "date": "2024",
+      "description": "Active NextJS & React portfolio site", 
+      "tags": ["nextjs", "tailwind"],
+      "github": "https://github.com/hectorastrom/personal-website",
+      "website": "https://hectorastrom.com"
+    }
+  ]
+}
