@@ -5,11 +5,13 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
+  CardImage,
 } from "@/components/ui/card";
 import HoverCard from "@/components/ui/HoverCard";
 import Image from "next/image";
 import fs from "fs";
 import path from "path";
+import Link from "next/link";
 
 // Define the structure of the project data
 interface Project {
@@ -58,12 +60,15 @@ export default async function Page() {
   return (
     <div className="grid grid-flow-row grid-cols-1 sm:grid-cols-2 gap-4">
       {projects.map((project) => (
-        <HoverCard key={project.id} id={project.id}>
-          <Card key={project.id} className={`h-full`} id={project.id}>
-            <CardHeader>
-              <div className="flex flex-row justify-between items-center space-x-1">
-                <CardTitle>{project.name}</CardTitle>
-                <div className="h-12 w-12 md:h-14 md:w-14 rounded-xl border-2 border-default/25">
+        <Link href={`/projects/${project.id}`} key={project.id} id={project.id}>
+          <HoverCard>
+            <Card className={`h-full`}>
+              <CardHeader>
+                <div>
+                  <CardTitle>{project.name}</CardTitle>
+                  <CardDescription>{project.date}</CardDescription>
+                </div>
+                <CardImage>
                   <Image
                     src={`/project_data/images/${project.image_name}`}
                     alt={project.name}
@@ -71,24 +76,23 @@ export default async function Page() {
                     height={100}
                     className="object-contain w-full h-full rounded-xl"
                   />
-                </div>
-              </div>
-              <CardDescription>{project.date}</CardDescription>
-            </CardHeader>
-            <CardContent className="">{project.description}</CardContent>
-            <CardFooter className="flex flex-wrap">
-              {project.tags.map((tag) => (
-                <span
-                  key={tag}
-                  className="mr-2 mb-2 bg-gray-200 rounded-full px-2 py-1 text-xs md:text-sm lg:text-base"
-                >
-                  {tag}
-                </span>
-              ))}
-            </CardFooter>
-          </Card>
-        </HoverCard>
+                </CardImage>
+              </CardHeader>
+              <CardContent className="">{project.description}</CardContent>
+              <CardFooter className="flex flex-wrap">
+                {project.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="mr-2 mb-2 bg-gray-200 rounded-full px-2 py-1 text-xs md:text-sm lg:text-base"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </CardFooter>
+            </Card>
+          </HoverCard>
+        </Link>
       ))}
     </div>
   );
-};
+}

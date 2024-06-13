@@ -1,5 +1,6 @@
 import * as React from "react";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 const Card = React.forwardRef<
   HTMLDivElement,
@@ -22,11 +23,12 @@ const CardHeader = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <div
     ref={ref}
-    className={cn("flex flex-col space-y-1.5 p-6", className)}
+    className={cn("flex justify-between items-center p-6", className)}
     {...props}
   />
 ));
 CardHeader.displayName = "CardHeader";
+
 
 const CardTitle = React.forwardRef<
   HTMLParagraphElement,
@@ -49,11 +51,28 @@ const CardDescription = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <p
     ref={ref}
-    className={cn("text-sm text-muted-foreground", className)}
+    className={cn("text-sm text-muted-foreground mt-1", className)}
     {...props}
   />
 ));
 CardDescription.displayName = "CardDescription";
+
+const CardImage = React.forwardRef<
+  HTMLDivElement,
+  React.HTMLAttributes<HTMLDivElement>
+>(({ className, ...props }, ref) => (
+  <div
+    ref={ref}
+    className={cn(
+      "h-12 w-12 md:h-14 md:w-14 rounded-xl border-2 border-default/25",
+      className
+    )}
+    {...props}
+  >
+    {props.children}
+  </div>
+));
+CardImage.displayName = "CardImage";
 
 const CardContent = React.forwardRef<
   HTMLDivElement,
@@ -86,4 +105,5 @@ export {
   CardTitle,
   CardDescription,
   CardContent,
+  CardImage,
 };
