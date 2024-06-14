@@ -80,7 +80,7 @@ export default async function Page() {
               </CardHeader>
               <CardContent className="">{project.description}</CardContent>
               <CardFooter className="flex flex-wrap">
-                {project.tags.map((tag) => (
+                {project.tags.slice(0, 3).map((tag : string) => (
                   <span
                     key={tag}
                     className="mr-2 mb-2 bg-gray-200 rounded-full px-2 py-1 text-xs md:text-sm lg:text-base"

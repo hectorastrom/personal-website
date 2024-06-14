@@ -1,22 +1,26 @@
-
-
 import { notFound } from "next/navigation";
 import fs from "fs";
 import path from "path";
 import React from "react";
 import Image from "next/image";
 import Handles from "@/components/Handles1";
+import Link from "next/link";
 
 type Project = {
   id: string;
   image_name: string;
+  ss_name: string;
   name: string;
   date: string;
   description: string;
   tags: string[];
+  status: string;
   github?: string;
   website?: string;
   devpost?: string;
+  overview: string;
+  role: string;
+  team?: string[];
 };
 
 const getProjectData = () => {
@@ -37,11 +41,17 @@ export async function generateStaticParams() {
 
 const ProjectPage = ({ params }: { params: { slug: string } }) => {
   const { projects } = getProjectData();
-  const project = projects.find((p) => p.id === params.slug);
+  const project = projects.find((p: Project) => p.id === params.slug);
 
   if (!project) {
     notFound();
   }
+
+  const links = [
+    { href: project.github, label: "GitHub" },
+    { href: project.website, label: "Website" },
+    { href: project.devpost, label: "Devpost" },
+  ].filter((link) => link.href); // Filter out undefined links
 
   return (
     <>
@@ -49,56 +59,75 @@ const ProjectPage = ({ params }: { params: { slug: string } }) => {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-8">
             <h1 className="text-4xl font-bold text-emphasis">{project.name}</h1>
-            <Handles/>
+            <span className="font-bold">STATUS: </span>
+            <p className="inline">{project.status}</p>
           </div>
-          <div className="relative border-2 rounded-xl border-emphasis\20 p-4 shadow-md mb-8">
-            <Image
-              src={`/project_data/images/${project.image_name}`}
-              alt={`${project.name} Screenshot`}
-              width={250}
-              height={250}
-              className="object-contain w-full h-full rounded-xl"
-            />
+          <div className="glow-border-container mb-8">
+            <div className="glow-border">
+              <Image
+                src={`/project_data/screenshots/${project.ss_name}`}
+                alt={`${project.name} Screenshot`}
+                width={1600}
+                height={900}
+                className="object-contain w-full h-full rounded-xl"
+              />
+            </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
-              <h2 className="text-2xl font-bold text-emphasis mb-4">My Role</h2>
-              <p className="mb-2">
-                Team lead — Design Competition, Rapid Research, Interaction
-                Design, Visual Design, Rapid Prototyping
-              </p>
-              <h2 className="text-2xl font-bold text-emphasis mb-4">Team</h2>
-              <p className="mb-2">Xavier Woo</p>
-              <p>Elson Liang</p>
-              <h2 className="text-2xl font-bold text-emphasis mb-4">
-                Timeline & Result
+              <h2 className="text-2xl font-bold text-emphasis mb-2">My Role</h2>
+              <p className="mb-2">{project.role}</p>
+              {project.team && (
+                <>
+                  <h2 className="text-2xl font-bold text-emphasis mb-2">
+                    Team
+                  </h2>
+                  {project.team.map((member: string, index: number) => (
+                    <p key={index} className="mb-2">
+                      {member}
+                    </p>
+                  ))}
+                </>
+              )}
+              <h2 className="text-2xl font-bold text-emphasis mb-2">
+                Tools and Software
               </h2>
-              <p>48 Hours, 2nd place out of 985 teams</p>
+              <div className="flex flex-wrap">
+                {project.tags.map((tag : string) => (
+                  <span
+                    key={tag}
+                    className="mr-2 mb-2 bg-gray-200 rounded-full px-2 py-1 text-xs md:text-sm lg:text-base"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
             </div>
             <div>
-              <h2 className="text-2xl font-bold text-emphasis mb-4">
+              <h2 className="text-2xl font-bold text-emphasis mb-2">
                 Overview
               </h2>
-              <p>
-                Spotlight is an entertainment streaming platform that aims to
-                foster authentic interactions between friends. The app bolsters
-                the notion that entertainment is best experienced around the
-                presence of others, especially in moments where we&apos;re inevitably
-                disconnected.
-              </p>
-              <p className="mt-4">
-                Spotlight has features like instant messaging and real-time
-                watch parties that cater to small groups of friends. The
-                platform differs from large streaming platforms by leveraging a
-                user&apos;s immediate social circle to surface content aligned with
-                their shared preferences.
-              </p>
-              <p className="mt-4 text-emphasis">
-                This case study is a revisionary approach to our original 2nd
-                place competition entry.
-              </p>
+              <p>{project.overview}</p>
             </div>
           </div>
+          {links.length > 0 && (
+            <div className="mt-8">
+              <h2 className="text-2xl font-bold text-emphasis mb-2">Links</h2>
+              <ul className="flex flex-wrap gap-2 sm:gap-4 md:gap-8 text-xl sm:text-2xl">
+                {links.map((link, index) => (
+                  <li key={index}>
+                    <Link
+                      href={link.href}
+                      target="_blank"
+                      className="text-emphasis font-normal hover:saturate-200"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
         </div>
       </div>
     </>

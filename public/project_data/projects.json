@@ -17,42 +17,61 @@
     {
       "id": "cri",
       "image_name": "cri.png",
+      "ss_name": "cri169_ss.png",
       "name": "CRInteractive",
       "date": "2021-2023",
       "description": "Platform to quantify and track rowing performance metrics",
       "tags": ["Python", "Flask", "SQLite"],
+      "status": "sunset",
       "github": "https://github.com/hectorastrom/CRInteractive",
-      "website": "https://www.crinteractive.org/"
+      "website": "https://www.crinteractive.org/",
+      "role" : "Software Engineer",
+      "overview": "blah blah this was a big project yada yada",
+      "team": ["Albert Astrom - Full Stack"]
     },
     {
       "id": "tim",
       "image_name": "tim.png",
+      "ss_name": "tim_ss.png",
       "name": "Text into Music",
       "date": "2023",
       "description": "Web app that layers bespoke audio soundscapes to your books", 
-      "tags": ["OpenAI", "React", "Spotify"],
+      "tags": ["OpenAI", "React", "HuggingFace", "PyTorch", "Spotify-API"],
+      "status": "sunset",
       "github": "https://github.com/Brotherswords/HackMIT2023",
-      "devpost": "https://devpost.com/software/tim-text-into-music"
+      "devpost": "https://devpost.com/software/tim-text-into-music",
+      "role" : "Machine Learning, Backend Developer",
+      "overview": "blah blah this was a big project yada yada",
+      "team": ["Alec Wang - Front End", "Emma Qin - Machine Learning", "Lavan Viv. - Front End"]
     },
     {
       "id": "stud",
       "image_name": "stud.png",
+      "ss_name": "stud169_ss.png",
       "name": "stud",
       "date": "2023",
       "description": "Web app and chrome extension for building smarter study habits", 
-      "tags": ["NextJS", "Tailwind", "Chrome-API"],
+      "status": "sunset",
+      "tags": ["NextJS", "Tailwind", "Firebase", "Chrome-API"],
       "github": "https://github.com/albertastrom/stud",
-      "devpost": "https://devpost.com/software/stud-the-study-bud"
+      "devpost": "https://devpost.com/software/stud-the-study-bud",
+      "role" : "Backend Developer",
+      "overview": "blah blah this was a big project yada yada",
+      "team": ["Albert Astrom - Backend API", "Eli Olcott - Full Stack", "Jude Partovi - Front End"]
     },
     {
       "id": "portfolio",
       "image_name": "borderless_portfolio.png",
+      "ss_name": "portfolio169_ss.png",
       "name": "This Website!",
       "date": "2024",
       "description": "Active NextJS & React portfolio site", 
-      "tags": ["NextJS", "Tailwind"],
+      "tags": ["NextJS", "React", "Tailwind"],
+      "status": "in development",
       "github": "https://github.com/hectorastrom/personal-website",
-      "website": "https://hectorastrom.com"
+      "website": "https://hectorastrom.com",
+      "role": "Software Developer",
+      "overview": "My personal portfolio website, featuring my past projects, work experience, and blog!"
     }
   ]
 }
