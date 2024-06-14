@@ -12,7 +12,6 @@ function MeImg() {
           width={500} //arbitrary
           height={500}
           className="object-contain w-full h-full"
-          priority={true}
         />
       </Link>
     </div>

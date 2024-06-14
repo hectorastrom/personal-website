@@ -69,6 +69,7 @@ const ProjectPage = ({ params }: { params: { slug: string } }) => {
                 alt={`${project.name} Screenshot`}
                 width={1600}
                 height={900}
+                priority={true}
                 className="object-contain w-full h-full rounded-xl"
               />
             </div>
@@ -93,7 +94,7 @@ const ProjectPage = ({ params }: { params: { slug: string } }) => {
                 Tools and Software
               </h2>
               <div className="flex flex-wrap">
-                {project.tags.map((tag : string) => (
+                {project.tags.map((tag: string) => (
                   <span
                     key={tag}
                     className="mr-2 mb-2 bg-gray-200 rounded-full px-2 py-1 text-xs md:text-sm lg:text-base"
