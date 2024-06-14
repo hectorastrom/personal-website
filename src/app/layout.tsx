@@ -21,7 +21,7 @@ export default function RootLayout({
       >
         <ResponsiveNav />
         <main className="pb-6 md:pl-4 pl-0">
-          <div className="mt-16 ml:-mt-8 sm:mt-18 md:mt-8">{children}</div>
+          <div className="mt-[4.5rem] ml:-mt-8 sm:mt-18 md:mt-8">{children}</div>
         </main>
       </body>
     </html>

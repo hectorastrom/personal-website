@@ -94,6 +94,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
           </div>
         </div>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8">
+          {/* first col */}
           <div>
             <h2 className="text-lg md:text-xl font-bold text-emphasis mb-1">
               My Role
@@ -130,57 +131,61 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
               {project.tags.map((tag: string) => (
                 <span
                   key={tag}
-                  className="mr-2 mb-1 bg-gray-200 rounded-full px-2 py-1 text-sm md:text-base lg:text-base"
+                  className="mr-2 mb-2 bg-gray-200 rounded-full px-2 py-1 text-sm md:text-base lg:text-base"
                 >
                   {tag}
                 </span>
               ))}
             </div>
-          </div>
-          {/* second col */}
-          <div>
-            <h2 className="text-lg md:text-xl font-bold text-emphasis mb-1">
-              Overview
-            </h2>
-            <div>
-              {project.overview.map((line: string, index : number) => (
-                <>
-                  <p key={index} className="mb-4">{line}</p>
-                </>
-              ))}
-            </div>
+
+            {links.length > 0 && (
+              <div className="mt-4">
+                <h2 className="text-lg md:text-xl font-bold text-emphasis mb-1">
+                  Links
+                </h2>
+                <ul className="flex flex-wrap gap-2 sm:gap-x-4 md:gap-x-8 text-lg sm:text-lg md:text-xl">
+                  {links.map((link) => (
+                    <li key={link.label}>
+                      <Link
+                        href={link.href}
+                        target="_blank"
+                        className="text-emphasis font-normal hover:saturate-200"
+                      >
+                        {link.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
 
             {project.note && (
               <div className="mt-4">
                 <h2 className="text-emphasis font-bold mb-1 text-lg md:text-xl">
                   Note
                 </h2>
-                <p className="text-opacity-50 text-sm md:text-base">{project.note}</p>
+                <p className="text-opacity-50 text-sm md:text-base">
+                  {project.note}
+                </p>
               </div>
             )}
           </div>
+          
+          {/* second col */}
+          <div>
+            <h2 className="text-lg md:text-xl font-bold text-emphasis mb-1">
+              Overview
+            </h2>
+            <div>
+              {project.overview.map((line: string, index: number) => (
+                <p key={index} className="mb-4">
+                  {line}
+                </p>
+              ))}
+            </div>
+          </div>
         </div>
         {/* end of grid */}
-        {links.length > 0 && (
-          <div className="mt-8">
-            <h2 className="text-lg md:text-xl font-bold text-emphasis mb-1">
-              Links
-            </h2>
-            <ul className="flex flex-wrap gap-2 sm:gap-4 md:gap-8 text-lg sm:text-lg md:text-xl">
-              {links.map((link) => (
-                <li key={link.label}>
-                  <Link
-                    href={link.href}
-                    target="_blank"
-                    className="text-emphasis font-normal hover:saturate-200"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
       </div>
     </>
   );

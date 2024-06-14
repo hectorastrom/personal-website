@@ -26,7 +26,11 @@
       "github": "https://github.com/hectorastrom/CRInteractive",
       "website": "https://www.crinteractive.org/",
       "role": "Software Engineer",
-      "overview": "blah blah this was a big project yada yada",
+      "overview": [
+        "At its core, CRInteractive was designed to quantify, track, and visualize key rowing performance metrics. This transparency in data allowed athletes to focus on specific practice goals and understand their areas of improvement.",
+        "Coaches benefited from an intuitive platform to discuss team strategies and individual performance, fostering an environment of open communication and shared team objectives.",
+        "At its peak, the app had over 100 active users and managed thousands of database entries, making it a pivotal tool in rowing team management and support."
+      ],
       "team": [{ "Albert Astrom": "Software Engineer" }]
     },
     {
@@ -36,16 +40,29 @@
       "name": "Text into Music",
       "date": "2023",
       "description": "Web app that layers bespoke audio soundscapes to your books",
-      "tags": ["OpenAI", "React", "HuggingFace", "PyTorch", "Spotify-API"],
+      "tags": [
+        "OpenAI",
+        "React",
+        "HuggingFace",
+        "PyTorch",
+        "Kaggle",
+        "Spotify-API"
+      ],
       "status": "sunset",
       "github": "https://github.com/Brotherswords/HackMIT2023",
       "devpost": "https://devpost.com/software/tim-text-into-music",
-      "role": "Machine Learning, Backend Developer",
-      "overview": "blah blah this was a big project yada yada",
+      "role": "ML Engineer, Backend Developer",
+      "overview": [
+        "TiM (Text Into Music) is a revolutionary platform that adds bespoke soundtracks to your books. A React-built web app allows users to upload their favorite books so that our ML model will automatically map the text on each page to a suitable Spotify track, playing it live while users read. ",
+        "We initially trained a sentiment analysis NLP model based on synthetic data from GPT-3.5 (text to sentiment labels) to match text with songs. We aimed to pair this model with Kaggle's MuSe dataset to find songs from sentiment labels. However, given our limited training data and time, this model performed inadequately.",
+        "At the last minute, we pivoted to using a version of the RoBERTa sentiment analysis base model from HuggingFace. We mapped the emotional outputs of this model to labels used by the Spotify API to classify songs' sentiments, allowing us to select music tailored to each page.",
+        "In the future, we'd like to explore generating music through diffusion models like Stable Audio for an even more tailored and adaptable audio experience."
+      ],
+      "note": "TiM was developed as part of HackMIT 2023, MIT's 24 hour hackathon.",
       "team": [
-        {"Alec Wang" : "Front End"},
-        {"Emma Qin" : "Machine Learning"},
-        {"Lavan Viv." : "Front End"}
+        { "Alec Wang": "Front End" },
+        { "Emma Qin": "Machine Learning" },
+        { "Lavan Viv.": "Front End" }
       ]
     },
     {
@@ -60,27 +77,33 @@
       "github": "https://github.com/albertastrom/stud",
       "devpost": "https://devpost.com/software/stud-the-study-bud",
       "role": "Backend Developer",
-      "overview": "",
+      "overview": [
+        "stud is a web-app and Chrome extension that optimizes study sessions with a balanced approach of focus and rest.",
+        "By setting work time goals and using a flexible timer system, stud encourages a disciplined study routine.",
+        "The extension tracks time on browser tabs, classifying them as productive or unproductive to keep users on track.",
+        "At the end of sessions, users can review productivity metrics and access reports to improve study habits."
+      ],
       "note": "stud was developed as part of HackHarvard 2023, Harvard's 36-hour hackathon.",
       "team": [
-        {"Albert Astrom" : "Backend API"},
-        {"Eli Olcott" : "Full Stack"},
-        {"Jude Partovi" : "Front End"}
+        { "Albert Astrom": "Backend API" },
+        { "Eli Olcott": "Full Stack" },
+        { "Jude Partovi": "Front End" }
       ]
     },
     {
       "id": "portfolio",
       "image_name": "borderless_portfolio.png",
       "ss_name": "portfolio169_ss.png",
-      "name": "This Website!",
+      "name": "This Website",
       "date": "2024",
       "description": "Active NextJS & React portfolio site",
       "tags": ["NextJS", "React", "Tailwind"],
       "status": "in development",
       "github": "https://github.com/hectorastrom/personal-website",
-      "website": "https://hectorastrom.com",
       "role": "Software Developer",
-      "overview": "My personal portfolio website, featuring my past projects, work experience, and blog!"
+      "overview": [
+        "My personal portfolio website, featuring my past projects, work experience, and blog."
+      ]
     }
   ]
 }
