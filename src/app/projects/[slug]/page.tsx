@@ -3,8 +3,12 @@ import fs from "fs";
 import path from "path";
 import React from "react";
 import Image from "next/image";
-import Handles from "@/components/Handles1";
+import { IoMdArrowRoundBack } from "react-icons/io";
 import Link from "next/link";
+
+type TeamMember = {
+  [name: string]: string;
+};
 
 type Project = {
   id: string;
@@ -18,9 +22,10 @@ type Project = {
   github?: string;
   website?: string;
   devpost?: string;
-  overview: string;
   role: string;
-  team?: string[];
+  overview: string;
+  note?: string;
+  team?: TeamMember[];
 };
 
 const getProjectData = () => {
@@ -39,7 +44,7 @@ export async function generateStaticParams() {
   return projects.map((project: { id: string }) => ({ slug: project.id }));
 }
 
-const ProjectPage = ({ params }: { params: { slug: string } }) => {
+export default function ProjectPage({ params }: { params: { slug: string } }) {
   const { projects } = getProjectData();
   const project = projects.find((p: Project) => p.id === params.slug);
 
@@ -55,84 +60,122 @@ const ProjectPage = ({ params }: { params: { slug: string } }) => {
 
   return (
     <>
-      <div className="sm:-mt-6 md:-mt-8 min-h-screen text-default">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-8">
-            <h1 className="text-4xl font-bold text-emphasis">{project.name}</h1>
-            <span className="font-bold">STATUS: </span>
-            <p className="inline">{project.status}</p>
-          </div>
-          <div className="glow-border-container mb-8">
-            <div className="glow-border">
-              <Image
-                src={`/project_data/screenshots/${project.ss_name}`}
-                alt={`${project.name} Screenshot`}
-                width={1600}
-                height={900}
-                priority={true}
-                className="object-contain w-full h-full rounded-xl"
-              />
+      <div className="sm:-mt-6 md:-mt-8 min-h-screen text-default text-base md:text-lg">
+        <div className="text-center mb-8">
+          {/* Back button, only on big screens */}
+          <Link
+            href="/projects"
+            className="text-emphasis font-normal hover:saturate-200 hidden md:block"
+          >
+            <div className="flex justify-start gap-1 mb-4">
+              <IoMdArrowRoundBack className="text-3xl -mt-0.5" />
+              Back
             </div>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div>
-              <h2 className="text-2xl font-bold text-emphasis mb-2">My Role</h2>
-              <p className="mb-2">{project.role}</p>
-              {project.team && (
-                <>
-                  <h2 className="text-2xl font-bold text-emphasis mb-2">
-                    Team
-                  </h2>
-                  {project.team.map((member: string, index: number) => (
-                    <p key={index} className="mb-2">
-                      {member}
-                    </p>
-                  ))}
-                </>
-              )}
-              <h2 className="text-2xl font-bold text-emphasis mb-2">
-                Tools and Software
-              </h2>
-              <div className="flex flex-wrap">
-                {project.tags.map((tag: string) => (
-                  <span
-                    key={tag}
-                    className="mr-2 mb-2 bg-gray-200 rounded-full px-2 py-1 text-xs md:text-sm lg:text-base"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </div>
-            <div>
-              <h2 className="text-2xl font-bold text-emphasis mb-2">
-                Overview
-              </h2>
-              <p>{project.overview}</p>
-            </div>
-          </div>
-          {links.length > 0 && (
-            <div className="mt-8">
-              <h2 className="text-2xl font-bold text-emphasis mb-2">Links</h2>
-              <ul className="flex flex-wrap gap-2 sm:gap-4 md:gap-8 text-xl sm:text-2xl">
-                {links.map((link, index) => (
-                  <li key={index}>
-                    <Link
-                      href={link.href}
-                      target="_blank"
-                      className="text-emphasis font-normal hover:saturate-200"
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
+          </Link>
+
+          <h1 className="text-2xl md:text-4xl font-bold text-emphasis">
+            {project.name}
+          </h1>
+          <span className="mt-6">
+            <h3 className="font-bold mt-4 inline-block">STATUS:</h3>
+            <p className="inline"> {project.status}</p>
+          </span>
         </div>
+        <div className="glow-border-container mb-8">
+          <div className="glow-border">
+            <Image
+              src={`/project_data/screenshots/${project.ss_name}`}
+              alt={`${project.name} Screenshot`}
+              width={1600}
+              height={900}
+              priority={true}
+              className="absolute left-0 top-0 object-contain w-full h-full rounded-xl"
+            />
+          </div>
+        </div>
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8">
+          <div>
+            <h2 className="text-lg md:text-xl font-bold text-emphasis mb-1">
+              My Role
+            </h2>
+            <p className="mb-2">{project.role}</p>
+
+            {project.team && (
+              <>
+                <h2 className="text-lg md:text-xl font-bold text-emphasis mb-1">
+                  Team
+                </h2>
+                {/* Fixed Code */}
+                <ul className="mb-2">
+                  {project.team.map((member: TeamMember) => {
+                    const name = Object.keys(member)[0];
+                    const role = member[name];
+                    return (
+                      <li key={name} className="">
+                        <span className="md:hidden">- {name}</span>
+                        <span className="hidden md:inline">
+                          - {name}; {role}
+                        </span>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </>
+            )}
+
+            <h2 className="text-lg md:text-xl font-bold text-emphasis mb-1">
+              Tools and Software
+            </h2>
+            <div className="flex flex-wrap">
+              {project.tags.map((tag: string) => (
+                <span
+                  key={tag}
+                  className="mr-2 mb-1 bg-gray-200 rounded-full px-2 py-1 text-sm md:text-base lg:text-base"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </div>
+          {/* second col */}
+          <div>
+            <h2 className="text-lg md:text-xl font-bold text-emphasis mb-1">
+              Overview
+            </h2>
+            <p>{project.overview}</p>
+
+            {project.note && (
+              <div className="mt-4">
+                <p className="text-emphasis font-bold text-lg md:text-xl">
+                  Note:
+                </p>
+                <p className="text-opacity-50">{project.note}</p>
+              </div>
+            )}
+          </div>
+        </div>
+        {/* end of grid */}
+        {links.length > 0 && (
+          <div className="mt-8">
+            <h2 className="text-lg md:text-xl font-bold text-emphasis mb-1">
+              Links
+            </h2>
+            <ul className="flex flex-wrap gap-2 sm:gap-4 md:gap-8 text-lg sm:text-lg md:text-xl">
+              {links.map((link) => (
+                <li key={link.label}>
+                  <Link
+                    href={link.href}
+                    target="_blank"
+                    className="text-emphasis font-normal hover:saturate-200"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </div>
     </>
   );
-};
-
-export default ProjectPage;
+}

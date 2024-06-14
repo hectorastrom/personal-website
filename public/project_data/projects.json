@@ -3,7 +3,7 @@
     "rowStart": "row-auto",
     "colStart": "col-auto",
     "rowSpan": "row-span-1",
-    "colSpan": "col-span-1",    
+    "colSpan": "col-span-1",
     "smRowSpan": "sm:row-span-1",
     "smColSpan": "sm:col-span-1",
     "mdRowSpan": "md:row-span-1",
@@ -21,13 +21,13 @@
       "name": "CRInteractive",
       "date": "2021-2023",
       "description": "Platform to quantify and track rowing performance metrics",
-      "tags": ["Python", "Flask", "SQLite"],
+      "tags": ["Python", "Flask", "SQLite", "Bootstrap"],
       "status": "sunset",
       "github": "https://github.com/hectorastrom/CRInteractive",
       "website": "https://www.crinteractive.org/",
-      "role" : "Software Engineer",
+      "role": "Software Engineer",
       "overview": "blah blah this was a big project yada yada",
-      "team": ["Albert Astrom - Full Stack"]
+      "team": [{ "Albert Astrom": "Software Engineer" }]
     },
     {
       "id": "tim",
@@ -35,14 +35,18 @@
       "ss_name": "tim169_ss.png",
       "name": "Text into Music",
       "date": "2023",
-      "description": "Web app that layers bespoke audio soundscapes to your books", 
+      "description": "Web app that layers bespoke audio soundscapes to your books",
       "tags": ["OpenAI", "React", "HuggingFace", "PyTorch", "Spotify-API"],
       "status": "sunset",
       "github": "https://github.com/Brotherswords/HackMIT2023",
       "devpost": "https://devpost.com/software/tim-text-into-music",
-      "role" : "Machine Learning, Backend Developer",
+      "role": "Machine Learning, Backend Developer",
       "overview": "blah blah this was a big project yada yada",
-      "team": ["Alec Wang - Front End", "Emma Qin - Machine Learning", "Lavan Viv. - Front End"]
+      "team": [
+        {"Alec Wang" : "Front End"},
+        {"Emma Qin" : "Machine Learning"},
+        {"Lavan Viv." : "Front End"}
+      ]
     },
     {
       "id": "stud",
@@ -50,14 +54,19 @@
       "ss_name": "stud169_ss.png",
       "name": "stud",
       "date": "2023",
-      "description": "Web app and chrome extension for building smarter study habits", 
+      "description": "Web app and chrome extension for building smarter study habits",
       "status": "sunset",
       "tags": ["NextJS", "Tailwind", "Firebase", "Chrome-API"],
       "github": "https://github.com/albertastrom/stud",
       "devpost": "https://devpost.com/software/stud-the-study-bud",
-      "role" : "Backend Developer",
-      "overview": "blah blah this was a big project yada yada",
-      "team": ["Albert Astrom - Backend API", "Eli Olcott - Full Stack", "Jude Partovi - Front End"]
+      "role": "Backend Developer",
+      "overview": "",
+      "note": "stud was developed as part of HackHarvard 2023, Harvard's 36-hour hackathon.",
+      "team": [
+        {"Albert Astrom" : "Backend API"},
+        {"Eli Olcott" : "Full Stack"},
+        {"Jude Partovi" : "Front End"}
+      ]
     },
     {
       "id": "portfolio",
@@ -65,7 +74,7 @@
       "ss_name": "portfolio169_ss.png",
       "name": "This Website!",
       "date": "2024",
-      "description": "Active NextJS & React portfolio site", 
+      "description": "Active NextJS & React portfolio site",
       "tags": ["NextJS", "React", "Tailwind"],
       "status": "in development",
       "github": "https://github.com/hectorastrom/personal-website",

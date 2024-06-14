@@ -20,7 +20,7 @@ export default function RootLayout({
         className={`${bodyFont.className} bg-gradient-to-b from-slate-50 to-slate-100 text-xl text-default antialiased px-10 pb-24 grid grid-rows-2 max-w-full mt-28 md:pb-36 md:grid md:grid-cols-[max-content,minmax(0,36rem)] md:justify-center md:gap-x-12 h-min-screen`}
       >
         <ResponsiveNav />
-        <main className="pb-6 pl-4 sm:pl-0">
+        <main className="pb-6 md:pl-4 pl-0">
           <div className="mt-16 ml:-mt-8 sm:mt-18 md:mt-8">{children}</div>
         </main>
       </body>
