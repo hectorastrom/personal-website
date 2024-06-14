@@ -23,7 +23,7 @@ type Project = {
   website?: string;
   devpost?: string;
   role: string;
-  overview: string;
+  overview: string[];
   note?: string;
   team?: TeamMember[];
 };
@@ -142,14 +142,20 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
             <h2 className="text-lg md:text-xl font-bold text-emphasis mb-1">
               Overview
             </h2>
-            <p>{project.overview}</p>
+            <div>
+              {project.overview.map((line: string, index : number) => (
+                <>
+                  <p key={index} className="mb-4">{line}</p>
+                </>
+              ))}
+            </div>
 
             {project.note && (
               <div className="mt-4">
-                <p className="text-emphasis font-bold text-lg md:text-xl">
-                  Note:
-                </p>
-                <p className="text-opacity-50">{project.note}</p>
+                <h2 className="text-emphasis font-bold mb-1 text-lg md:text-xl">
+                  Note
+                </h2>
+                <p className="text-opacity-50 text-sm md:text-base">{project.note}</p>
               </div>
             )}
           </div>
