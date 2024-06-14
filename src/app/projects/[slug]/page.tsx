@@ -62,10 +62,10 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
     <>
       <div className="sm:-mt-6 md:-mt-8 min-h-screen text-default text-base md:text-lg">
         <div className="text-center mb-8">
-          {/* Back button, only on big screens */}
+          {/* Back button, only on wide screens */}
           <Link
             href="/projects"
-            className="text-emphasis font-normal hover:saturate-200 hidden md:block"
+            className="hidden sm:block text-emphasis font-normal hover:saturate-200"
           >
             <div className="flex justify-start gap-1 mb-4">
               <IoMdArrowRoundBack className="text-3xl -mt-0.5" />
@@ -170,7 +170,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
               </div>
             )}
           </div>
-          
+
           {/* second col */}
           <div>
             <h2 className="text-lg md:text-xl font-bold text-emphasis mb-1">

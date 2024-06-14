@@ -54,15 +54,15 @@
       "role": "ML Engineer, Backend Developer",
       "overview": [
         "TiM (Text Into Music) is a revolutionary platform that adds bespoke soundtracks to your books. A React-built web app allows users to upload their favorite books so that our ML model will automatically map the text on each page to a suitable Spotify track, playing it live while users read. ",
-        "We initially trained a sentiment analysis NLP model based on synthetic data from GPT-3.5 (text to sentiment labels) to match text with songs. We aimed to pair this model with Kaggle's MuSe dataset to find songs from sentiment labels. However, given our limited training data and time, this model performed inadequately.",
+        "We initially trained a sentiment analysis NLP model based on synthetic data from GPT-3.5 (text to sentiment label prompt) to match text with songs. We aimed to pair this model with Kaggle's MuSe dataset to find songs from these labels. However, given our limited training data and time, this model performed inadequately.",
         "At the last minute, we pivoted to using a version of the RoBERTa sentiment analysis base model from HuggingFace. We mapped the emotional outputs of this model to labels used by the Spotify API to classify songs' sentiments, allowing us to select music tailored to each page.",
         "In the future, we'd like to explore generating music through diffusion models like Stable Audio for an even more tailored and adaptable audio experience."
       ],
       "note": "TiM was developed as part of HackMIT 2023, MIT's 24 hour hackathon.",
       "team": [
-        { "Alec Wang": "Front End" },
-        { "Emma Qin": "Machine Learning" },
-        { "Lavan Viv.": "Front End" }
+        { "Alec Wang": "Frontend Dev" },
+        { "Emma Qin": "ML Engineer" },
+        { "Lavan Viv.": "Frontend Dev" }
       ]
     },
     {
@@ -86,8 +86,8 @@
       "note": "stud was developed as part of HackHarvard 2023, Harvard's 36-hour hackathon.",
       "team": [
         { "Albert Astrom": "Backend API" },
-        { "Eli Olcott": "Full Stack" },
-        { "Jude Partovi": "Front End" }
+        { "Eli Olcott": "Full Stack Dev" },
+        { "Jude Partovi": "Frontend Dev" }
       ]
     },
     {
