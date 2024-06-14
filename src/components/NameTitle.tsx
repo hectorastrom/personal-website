@@ -12,7 +12,7 @@ export default function NameTitle({text = "Hector Astrom", link=false} : NameTit
           className={`font-title text-2xl sm:text-3xl font-bold text-emphasis -rotate-2 md:-rotate-3`}
         >
           {link ? (
-            <Link className="shine-effecthow do " href="/">
+            <Link className="shine-effect" href="/">
               {text}
             </Link>
           ) : (

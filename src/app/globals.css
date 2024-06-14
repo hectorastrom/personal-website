@@ -113,7 +113,7 @@ body::before {
 }
 
 .shine-effect:hover::before {
-  animation: slide var(2.5s) forwards;
+  animation: slide 1.2s forwards;
 }
 
 @keyframes slide {
