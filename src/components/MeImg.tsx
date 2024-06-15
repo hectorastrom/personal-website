@@ -8,8 +8,10 @@ function MeImg() {
         <Image
           src="/images/me.png"
           alt="Picture of Hector from September 2023"
-          fill={true}
-          className="object-contain"
+          width={406}
+          height={461}
+          priority={true} // fine to have multiple priority images
+          className="object-contain w-full h-full"
         />
       </Link>
     </div>
