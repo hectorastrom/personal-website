@@ -16,12 +16,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${bodyFont.className} bg-gradient-to-b from-slate-50 to-slate-100 text-xl text-default antialiased mx-auto max-w-full min-h-screen mt-28 overflow-auto`}
+        className={`${bodyFont.className} bg-gradient-to-b from-slate-50 to-slate-100 text-xl text-default antialiased min-h-screen`}
       >
-        <div className="px-10 pb-24 grid grid-rows-2 md:pb-36 md:grid md:grid-cols-[max-content,minmax(0,36rem)] md:justify-center md:gap-x-12">
-          <ResponsiveNav />
-          <main className="pl-4 sm:pl-0">
-            <div className="mt-14 sm:mt-18 md:mt-8">{children}</div>
+        <div className="px-10 pb-24 mt-24 grid grid-rows-auto md:grid-cols-[max-content,minmax(0,48rem)] md:justify-center md:gap-x-12 max-w-full">
+          <ResponsiveNav className="self-start" />
+          <main className="self-start pb-6 md:pl-4 pl-0">
+            <div className="mt-[6rem] ml:-mt-8 sm:mt-18 md:mt-8">
+              {children}
+            </div>
           </main>
         </div>
       </body>
