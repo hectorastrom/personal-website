@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import { memo } from "react";
 
 function MeImg() {
   return (
@@ -9,13 +8,12 @@ function MeImg() {
         <Image
           src="/images/me.png"
           alt="Picture of Hector from September 2023"
-          width={500} //arbitrary
-          height={500}
-          className="object-contain w-full h-full"
+          fill={true}
+          className="object-contain"
         />
       </Link>
     </div>
   );
 }
 
-export default memo(MeImg);
+export default MeImg;

@@ -17,7 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${bodyFont.className} bg-gradient-to-b from-slate-50 to-slate-100 text-xl text-default antialiased px-10 pb-24 grid grid-rows-2 max-w-full mt-28 md:pb-36 md:grid md:grid-cols-[max-content,minmax(0,36rem)] md:justify-center md:gap-x-12 h-min-screen`}
+        className={`${bodyFont.className} bg-gradient-to-b from-slate-50 to-slate-100 text-xl text-default antialiased px-10 pb-24 grid grid-rows-2 max-w-full mt-28 md:pb-36 md:grid md:grid-cols-[max-content,minmax(0,48rem)] md:justify-center md:gap-x-12 h-min-screen`}
       >
         <ResponsiveNav />
         <main className="pb-6 md:pl-4 pl-0">
