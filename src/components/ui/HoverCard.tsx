@@ -17,6 +17,8 @@ const HoverCard: React.FC<HoverCardProps> = ({
     const card = cardRef.current;
     if (!card) return;
 
+    const mediaQuery = window.matchMedia("(min-width: 768px)");
+
     const handleMouseMove = (e: MouseEvent) => {
       const rect = card.getBoundingClientRect();
       const x = e.clientX - rect.left - rect.width / 2;
@@ -27,7 +29,7 @@ const HoverCard: React.FC<HoverCardProps> = ({
       const moveY = (y / distance) * Math.min(distance, maxDistance) * 0.1;
 
       card.style.transform = `translate(${moveX}px, ${moveY}px)`;
-      card.style.zIndex = "10";
+      card.style.zIndex = "10"; // still below navbar
     };
 
     const handleMouseLeave = () => {
@@ -35,12 +37,33 @@ const HoverCard: React.FC<HoverCardProps> = ({
       card.style.zIndex = "1";
     };
 
-    card.addEventListener("mousemove", handleMouseMove);
-    card.addEventListener("mouseleave", handleMouseLeave);
+    const addEventListeners = () => {
+      card.addEventListener("mousemove", handleMouseMove);
+      card.addEventListener("mouseleave", handleMouseLeave);
+    };
 
-    return () => {
+    const removeEventListeners = () => {
       card.removeEventListener("mousemove", handleMouseMove);
       card.removeEventListener("mouseleave", handleMouseLeave);
+    };
+
+    if (mediaQuery.matches) {
+      addEventListeners();
+    }
+
+    const handleMediaChange = (e: MediaQueryListEvent) => {
+      if (e.matches) {
+        addEventListeners();
+      } else {
+        removeEventListeners();
+      }
+    };
+
+    mediaQuery.addEventListener("change", handleMediaChange);
+
+    return () => {
+      removeEventListeners();
+      mediaQuery.removeEventListener("change", handleMediaChange);
     };
   }, []);
 

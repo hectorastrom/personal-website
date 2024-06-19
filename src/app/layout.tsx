@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { bodyFont } from "../../public/fonts/fonts";
 import ResponsiveNav from "@/components/ResponsiveNav";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata: Metadata = {
   title: "Hector Astrom",
@@ -21,11 +23,13 @@ export default function RootLayout({
         <div className="px-10 pb-24 mt-24 grid grid-rows-auto md:grid-cols-[max-content,minmax(0,48rem)] md:justify-center md:gap-x-12 max-w-full">
           <ResponsiveNav className="self-start" />
           <main className="self-start pb-6 md:pl-4 pl-0">
-            <div className="mt-[6rem] ml:-mt-8 sm:mt-18 md:mt-8">
+            <div className=" mt-24 md:mt-8">
               {children}
             </div>
           </main>
         </div>
+        <SpeedInsights/>
+        <Analytics/>
       </body>
     </html>
   );

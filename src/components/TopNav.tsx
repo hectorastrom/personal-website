@@ -7,7 +7,7 @@ import MeImg from "./MeImg";
 
 export default function TopNav() {
   return (
-    <div className="w-full bg-slate-50 shadow-lg p-4 grid grid-cols-4 items-center">
+    <div className="w-full bg-slate-50 shadow-lg p-4 grid grid-cols-4 items-center z-50">
       {/* Image Section */}
       <div className="row-span-2 col-span-1 flex justify-center">
         <MeImg/>
