@@ -7,7 +7,6 @@ import {
   CardContent,
 } from "@/components/ui/card";
 import { GiRoundStar } from "react-icons/gi";
-import Link from "next/link";
 import HorDivider from "@/components/HorDivider";
 
 export default function Page() {
@@ -22,12 +21,12 @@ export default function Page() {
 
   return (
     <>
-      <h1 className="text-2xl md:text-3xl text-emphasis font-bold pb-6">
+      <h1 className="text-2xl lg:text-3xl text-emphasis font-bold pb-6">
         Work Experience
       </h1>
 
       <div className="py-4">
-        <h3 className="text-opacity-75 text-default text-md font-bold">2024</h3>
+        <h3 className="text-opacity-75 text-default text-lg md:text-xl font-bold">2024</h3>
         <HorDivider gradient={false} />
       </div>
 
@@ -39,7 +38,7 @@ export default function Page() {
         <CardContent>
           <ul className="space-y-2">
             <li>
-              - Designed experiments to determine psychoacoustic properties of
+              - Designed experiments to determine psychoacoustic features of
               emotionally restorative soundscapes
             </li>
             <li>
@@ -53,9 +52,10 @@ export default function Page() {
               </a>{" "}
               using pandas, SciPy, and SQL
             </li>
+            <li>- Investigated machine learning architectures to predict restoration from psychoacoustic features of soundscapes</li>
             <li>
               - Awarded{" "}
-              <GiRoundStar className="inline-block text-amber-400 mb-1" /> 2024
+              <GiRoundStar className="inline-block text-amber-400 mb-1" /> 2024 MIT
               Outstanding UROP Student Award{" "}
               <GiRoundStar className="inline-block text-amber-400 mb-1" />{" "}
               following InterNoise 2024 Abstract Submission
@@ -81,12 +81,12 @@ export default function Page() {
       </Card>
 
       {/* school information */}
-      <h1 className="text-2xl md:text-3xl text-emphasis font-bold pb-6 mt-12">
+      <h1 className="text-2xl lg:text-3xl text-emphasis font-bold pb-6 mt-12">
         Relevant Coursework
       </h1>
       <ul className="space-y-2">
         {Object.entries(courses).map(([courseCode, courseName]) => (
-          <li key={courseCode}>
+          <li key={courseCode} className="text-base md:text-lg lg:text-xl">
             -{" "}
             <a
               className="custom-link"
