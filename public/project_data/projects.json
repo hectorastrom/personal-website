@@ -20,7 +20,14 @@
       "name": "Circa",
       "date": "2024 - Present",
       "description": "Online learning platform emphasizing conceptual understanding through text-embedding transformer models.",
-      "tags": ["HuggingFace", "FastAPI", "PyTorch", "Next.js", "React", "PostgreSQL"],
+      "tags": [
+        "HuggingFace",
+        "FastAPI",
+        "PyTorch",
+        "Next.js",
+        "React",
+        "PostgreSQL"
+      ],
       "status": "in development",
       "github": "https://github.com/hectorastrom/circa-backend",
       "role": "Software Engineer",
@@ -35,7 +42,7 @@
     {
       "id": "cri",
       "image_name": "cri.png",
-      "ss_name": "cri169_ss.png",
+      "ss_name": "cri_gif.gif",
       "name": "CRInteractive",
       "date": "2021 - 2023",
       "description": "Platform to quantify and track rowing performance metrics.",
@@ -96,7 +103,7 @@
       "devpost": "https://devpost.com/software/stud-the-study-bud",
       "role": "Backend Developer",
       "overview": [
-        "stud is a web-app and Chrome extension that optimizes study sessions with a balanced approach of focus and rest.",
+        "stud is a web app and Chrome extension that optimizes study sessions with a balanced approach of focus and rest.",
         "By setting work time goals and using a flexible timer system, stud encourages a disciplined study routine.",
         "The extension tracks time on browser tabs, classifying them as productive or unproductive to keep users on track.",
         "At the end of sessions, users can review productivity metrics and access reports to improve study habits."
@@ -104,9 +111,28 @@
       "note": "stud was developed as part of HackHarvard 2023, Harvard's 36-hour hackathon.",
       "team": [
         { "Albert Astrom": "Backend API" },
-        { "Eli Olcott": "Full Stack Dev" },
+        { "Eli Olcott": "Fullstack Dev" },
         { "Jude Partovi": "Frontend Dev" }
       ]
+    },
+    {
+      "id": "metatour",
+      "image_name": "metatour_logo.png",
+      "ss_name": "metatour_gif.gif",
+      "name": "Meta Tour",
+      "date": "2022",
+      "description": "A Google Street View-like platform tailored for home tours.",
+      "tags": ["Swift", "OpenCV", "Flask"],
+      "status": "sunset",
+      "github": "https://github.com/womogenes/meta-tour",
+      "role": "Backend Developer",
+      "overview": [
+        "Meta Tour featured a Swift app that utilized iPhone telemetry data to enable users to create 3D maps of their homes.",
+        "Users could enhance their tours by adding 3D panoramas at points of interest throughout their mapped homes.",
+        "These tours were shareable online and could be accessed via a Flask-based web application."
+      ],
+      "note": "Meta Tour was developed as a final project for a seven-week computer vision course at Harvard.",
+      "team": [{ "William Feng et. al": "Fullstack" }]
     },
     {
       "id": "portfolio",
