@@ -16,7 +16,7 @@ export default function Page() {
     "6.1210": "Introduction to Algorithms",
     "6.1200": "Math for Computer Science",
     "18.06": "Linear Algebra",
-    "6.3900": "Introduction to Machine Learning",
+    // "6.3900": "Introduction to Machine Learning",
   };
 
 

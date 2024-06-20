@@ -40,10 +40,10 @@ export default function Home() {
           <Link href={"/projects"} className="custom-link">
             summer,
           </Link>{" "}
-          read my{" "}
+          {/* read my{" "}
           <Link href={"/blog"} className="custom-link">
             blog,
-          </Link>{" "}
+          </Link>{" "} */}
           or{" "}
           <Link href={"mailto:hastrom@mit.edu"} className="custom-link">
             connect
