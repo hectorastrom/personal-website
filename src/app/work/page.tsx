@@ -21,12 +21,12 @@ export default function Page() {
 
   return (
     <>
-      <h1 className="text-2xl lg:text-3xl text-emphasis font-bold pb-6">
+      <h1 className="text-2xl lg:text-3xl text-emphasis font-bold pb-4">
         Work Experience
       </h1>
 
       <div className="py-4">
-        <h3 className="text-opacity-75 text-default text-lg md:text-xl font-bold">2024</h3>
+        <h3 className="text-opacity-75 text-default text-lg md:text-xl font-bold">Dec 2023 - Present</h3>
         <HorDivider gradient={false} />
       </div>
 
@@ -36,7 +36,7 @@ export default function Page() {
           <CardDescription>Researcher @ Sound(e)scape</CardDescription>
         </CardHeader>
         <CardContent>
-          <ul className="space-y-2">
+          <ul className="space-y-2 mb-2">
             <li>
               - Designed experiments to determine psychoacoustic features of
               emotionally restorative soundscapes
@@ -81,7 +81,7 @@ export default function Page() {
       </Card>
 
       {/* school information */}
-      <h1 className="text-2xl lg:text-3xl text-emphasis font-bold pb-6 mt-12">
+      <h1 className="text-2xl lg:text-3xl text-emphasis font-bold pb-4 mt-12">
         Relevant Coursework
       </h1>
       <ul className="space-y-2">
