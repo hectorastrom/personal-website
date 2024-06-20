@@ -15,12 +15,30 @@
   },
   "projects": [
     {
+      "id": "circa",
+      "image_name": "circa_logo.svg",
+      "name": "Circa",
+      "date": "2024 - Present",
+      "description": "Online learning platform emphasizing conceptual understanding through text-embedding transformer models.",
+      "tags": ["HuggingFace", "FastAPI", "PyTorch", "Next.js", "React", "PostgreSQL"],
+      "status": "in development",
+      "github": "https://github.com/hectorastrom/circa-backend",
+      "role": "Software Engineer",
+      "overview": [
+        "Circa is a flashcard-based learning platform designed to enhance conceptual understanding rather than mere memorization.",
+        "The platform utilizes a Next.js frontend and a PostgreSQL backend, capable of supporting thousands of users.",
+        "To evaluate a user's conceptual understanding, Circa quizzes users with items they're trying to learn, such as new words (e.g. prescience) or concepts (e.g. Gauss's Law). Users may choose to respond with text or speech, which is then processed using a HuggingFace Wav2Vec2 speech-to-text model. User responses are then embedded and semantically compared to the correct answers provided during setup to accurately assess understanding.",
+        "All of this processing is done on Circa's backend, which can be quickly accessed using a Python FastAPI server request.",
+        "The primary goal of Circa is to shift the focus of learning platforms, like Quizlet, from memorization to genuine understanding."
+      ]
+    },
+    {
       "id": "cri",
       "image_name": "cri.png",
       "ss_name": "cri169_ss.png",
       "name": "CRInteractive",
-      "date": "2021-2023",
-      "description": "Platform to quantify and track rowing performance metrics",
+      "date": "2021 - 2023",
+      "description": "Platform to quantify and track rowing performance metrics.",
       "tags": ["Python", "Flask", "SQLite", "Bootstrap"],
       "status": "sunset",
       "github": "https://github.com/hectorastrom/CRInteractive",
@@ -39,7 +57,7 @@
       "ss_name": "tim169_ss.png",
       "name": "Text into Music",
       "date": "2023",
-      "description": "Web app that layers bespoke audio soundscapes to your books",
+      "description": "Web app that layers bespoke audio soundscapes to your books.",
       "tags": [
         "OpenAI",
         "React",
@@ -71,9 +89,9 @@
       "ss_name": "stud169_ss.png",
       "name": "stud",
       "date": "2023",
-      "description": "Web app and chrome extension for building smarter study habits",
+      "description": "Web app and chrome extension for building smarter study habits.",
       "status": "sunset",
-      "tags": ["NextJS", "Tailwind", "Firebase", "Chrome-API"],
+      "tags": ["Next.js", "Tailwind", "Firebase", "Chrome-API"],
       "github": "https://github.com/albertastrom/stud",
       "devpost": "https://devpost.com/software/stud-the-study-bud",
       "role": "Backend Developer",
@@ -92,15 +110,15 @@
     },
     {
       "id": "portfolio",
-      "image_name": "borderless_portfolio.png",
+      "image_name": "borderless_portfolio.svg",
       "ss_name": "portfolio169_ss.png",
       "name": "This Website",
-      "date": "2024",
-      "description": "Active NextJS & React portfolio site",
-      "tags": ["NextJS", "React", "Tailwind"],
+      "date": "2024 - Present",
+      "description": "Active Next.js & React portfolio site.",
+      "tags": ["Next.js", "React", "Tailwind"],
       "status": "in development",
       "github": "https://github.com/hectorastrom/personal-website",
-      "role": "Software Developer",
+      "role": "Software Engineer",
       "overview": [
         "My personal portfolio website, featuring my past projects, work experience, and blog."
       ]
