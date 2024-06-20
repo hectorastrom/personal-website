@@ -23,7 +23,7 @@ const CardHeader = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <div
     ref={ref}
-    className={cn("flex justify-between items-center p-6", className)}
+    className={cn("flex justify-between gap-2 items-center p-6 overflow-hidden", className)}
     {...props}
   />
 ));
@@ -37,7 +37,7 @@ const CardTitle = React.forwardRef<
   <h3
     ref={ref}
     className={cn(
-      "text-sm md:text-lg lg:text-xl xl:text-2xl font-semibold leading-none tracking-tight",
+      "text-normal md:text-lg lg:text-xl xl:text-2xl font-semibold leading-none tracking-tight break-words",
       className
     )}
     {...props}
@@ -51,7 +51,7 @@ const CardDescription = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <p
     ref={ref}
-    className={cn("text-sm text-muted-foreground mt-1", className)}
+    className={cn("text-sm text-muted-foreground", className)}
     {...props}
   />
 ));
@@ -64,7 +64,7 @@ const CardImage = React.forwardRef<
   <div
     ref={ref}
     className={cn(
-      "h-12 w-12 md:h-14 md:w-14 rounded-xl border-2 border-default/25",
+      "h-12 w-12 md:h-14 md:w-14 flex-shrink-0 rounded-xl border-2 border-default/25",
       className
     )}
     {...props}
