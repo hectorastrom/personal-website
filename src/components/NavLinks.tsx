@@ -14,7 +14,7 @@ export default function NavLinks({ layout }: NavLinksProps) {
     { href: "/", label: "About" },
     { href: "/projects", label: "Projects" },
     { href: "/work", label: "Work" },
-    { href: "/blog", label: "Blog" },
+    // { href: "/blog", label: "Blog" },
   ];
 
   return (
