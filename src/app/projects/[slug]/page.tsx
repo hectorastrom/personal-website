@@ -155,13 +155,13 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                 <ul className="flex flex-wrap gap-2 sm:gap-x-4 md:gap-x-8 text-lg md:text-xl text-emphasis font-normal">
                   {links.map((link) => (
                     <li key={link.label}>
-                      <Link
+                      <a
                         href={link.href}
                         target="_blank"
                         className="hover:saturate-200"
                       >
                         {link.label}
-                      </Link>
+                      </a>
                     </li>
                   ))}
                 </ul>
