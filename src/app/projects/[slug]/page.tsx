@@ -5,6 +5,7 @@ import React from "react";
 import Image from "next/image";
 import { IoMdArrowRoundBack } from "react-icons/io";
 import Link from "next/link";
+import HorDivider from "@/components/HorDivider";
 
 type TeamMember = {
   [name: string]: string;
@@ -13,7 +14,7 @@ type TeamMember = {
 type Project = {
   id: string;
   image_name: string;
-  ss_name: string;
+  ss_name?: string;
   name: string;
   date: string;
   description: string;
@@ -81,18 +82,26 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
             <p className="inline"> {project.status}</p>
           </span>
         </div>
-        <div className="glow-border-container mb-8">
-          <div className="glow-border">
-            <Image
-              src={`/project_data/screenshots/${project.ss_name}`}
-              alt={`${project.name} Screenshot`}
-              width={1600}
-              height={900}
-              priority={true}
-              className="absolute left-0 top-0 object-contain w-full h-full rounded-xl"
-            />
+        {project.ss_name 
+        ? (<>
+            <div className="glow-border-container mb-8">
+              <div className="glow-border">
+                <Image
+                  src={`/project_data/screenshots/${project.ss_name}`}
+                  alt={`${project.name} Screenshot`}
+                  width={1600}
+                  height={900}
+                  priority={true}
+                  className="absolute left-0 top-0 object-contain w-full h-full rounded-xl"
+                />
+              </div>
+            </div>
+          </>) 
+          : 
+          <div className="pb-8">
+            <HorDivider/>
           </div>
-        </div>
+        }
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8">
           {/* first col */}
           <div>
@@ -143,16 +152,16 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                 <h2 className="text-lg md:text-xl font-bold text-emphasis mb-1">
                   Links
                 </h2>
-                <ul className="flex flex-wrap gap-2 sm:gap-x-4 md:gap-x-8 text-lg sm:text-lg md:text-xl">
+                <ul className="flex flex-wrap gap-2 sm:gap-x-4 md:gap-x-8 text-lg md:text-xl text-emphasis font-normal">
                   {links.map((link) => (
                     <li key={link.label}>
-                      <Link
+                      <a
                         href={link.href}
                         target="_blank"
-                        className="text-emphasis font-normal hover:saturate-200"
+                        className="hover:saturate-200"
                       >
                         {link.label}
-                      </Link>
+                      </a>
                     </li>
                   ))}
                 </ul>
