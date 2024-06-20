@@ -1,11 +1,16 @@
 interface HorDividerProps {
-  className? : string
+  className? : string;
+  gradient?: boolean;
 }
 
-export default function HorDivider({className} : HorDividerProps) {
+export default function HorDivider({className, gradient = false} : HorDividerProps) {
+
+    const gradientClass = gradient
+      ? "bg-transparent bg-gradient-to-r from-transparent via-slate-500 to-transparent"
+      : "bg-slate-500";
     return (
       <>
-        <hr className={`${className} my-4 sm:my-2 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-50 dark:via-neutral-400`} />
+        <hr className={`${className} my-4 sm:my-2 h-px border-t-0 ${gradientClass} opacity-50`} />
       </>
     );
 }
