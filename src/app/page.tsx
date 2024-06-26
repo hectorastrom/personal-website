@@ -1,6 +1,5 @@
 import NameTitle from "@/components/NameTitle";
 import Link from "next/link";
-import { FaHandPeace } from "react-icons/fa6";
 
 export default function Home() {
   return (
@@ -23,8 +22,8 @@ export default function Home() {
 
         <p>
           My main interest lies at the intersection of{" "}
-          <span className="italic">machine learning</span> and
-          <span className="italic"> healthcare</span>. I&apos;m also a{" "}
+          <span className="">machine learning</span> and
+          <span className=""> healthcare</span>. I&apos;m also a{" "}
           <a
             className="custom-link"
             target="_blank"
