@@ -16,7 +16,7 @@ import Link from "next/link";
 // Define the structure of the project data
 interface Project {
   id: string;
-  image_name: string;
+  image_path: string;
   name: string;
   date: string;
   description: string;
@@ -68,7 +68,7 @@ export default async function Page() {
                   </div>
                   <CardImage>
                     <Image
-                      src={`/project_data/images/${project.image_name}`}
+                      src={`/project_data/images/${project.image_path}`}
                       alt={project.name}
                       width={100}
                       height={100}

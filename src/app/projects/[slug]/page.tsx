@@ -2,10 +2,10 @@ import { notFound } from "next/navigation";
 import fs from "fs";
 import path from "path";
 import React from "react";
-import Image from "next/image";
 import { IoMdArrowRoundBack } from "react-icons/io";
 import Link from "next/link";
 import HorDivider from "@/components/HorDivider";
+import HoverGif from "@/components/HoverGif";
 
 type TeamMember = {
   [name: string]: string;
@@ -13,8 +13,9 @@ type TeamMember = {
 
 type Project = {
   id: string;
-  image_name: string;
-  ss_name?: string;
+  image_path: string;
+  ss_path?: string;
+  gif_path?: string;
   name: string;
   date: string;
   description: string;
@@ -82,26 +83,27 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
             <p className="inline"> {project.status}</p>
           </span>
         </div>
-        {project.ss_name 
-        ? (<>
+        {project.ss_path ? (
+          <>
             <div className="glow-border-container mb-8">
               <div className="glow-border">
-                <Image
-                  src={`/project_data/screenshots/${project.ss_name}`}
+                <HoverGif
+                  staticImage={`/project_data/screenshots/${project.ss_path}`}
+                  gifImage={
+                    project.gif_path
+                      ? `/project_data/screenshots/${project.gif_path}`
+                      : undefined
+                  }
                   alt={`${project.name} Screenshot`}
-                  width={1600}
-                  height={900}
-                  priority={true}
-                  className="absolute left-0 top-0 object-contain w-full h-full rounded-xl"
                 />
               </div>
             </div>
-          </>) 
-          : 
+          </>
+        ) : (
           <div className="pb-8">
-            <HorDivider/>
+            <HorDivider />
           </div>
-        }
+        )}
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8">
           {/* first col */}
           <div>
