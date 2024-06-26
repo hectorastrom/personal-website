@@ -8,7 +8,12 @@ interface NavLinksProps {
 export default function NavLinks({ layout }: NavLinksProps) {
   const pathname = usePathname();
 
-  const isActive = (href: string) => pathname === href;
+  const isActive = (href: string) => {
+    if (href === "/") {
+      return pathname === href; // Only underline for exact match on "/"
+    }
+    return pathname.startsWith(href); // Underline for all subpages
+  };
 
   const links = [
     { href: "/", label: "About" },
