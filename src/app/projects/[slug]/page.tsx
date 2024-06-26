@@ -83,6 +83,8 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
             <p className="inline"> {project.status}</p>
           </span>
         </div>
+        {/* if we have at least a static image, we'll try to render it */}
+        {/* if we have a gif on top of that, we'll render the gif on hover */}
         {project.ss_path ? (
           <>
             <div className="glow-border-container mb-8">

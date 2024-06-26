@@ -15,12 +15,12 @@ export default function HoverGif({
   gifImage,
   alt,
 }: HoverGifProps) {
-  const [gifSrc, setGifSrc] = useState(gifImage);
+  const [gifSrc, setGifSrc] = useState<string>(gifImage || staticImage);
 
   const handleMouseEnter = () => {
     setGifSrc(staticImage);
     setTimeout(() => {
-      setGifSrc(gifImage);
+      setGifSrc(gifImage || staticImage);
     }, 50); // Small delay to reset the GIF
   };
 
