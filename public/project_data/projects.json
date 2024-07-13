@@ -24,10 +24,10 @@
         "HuggingFace",
         "FastAPI",
         "PyTorch",
+        "MongoDB",
+        "OpenAI",
         "Next.js",
-        "React",
-        "PostgreSQL"
-      ],
+        "React"      ],
       "status": "in development",
       "github": "https://github.com/hectorastrom/circa-backend",
       "role": "Software Engineer",
