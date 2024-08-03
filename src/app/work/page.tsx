@@ -26,7 +26,7 @@ export default function Page() {
       </h1>
 
       <div className="py-4">
-        <h3 className="text-opacity-75 text-default text-lg md:text-xl font-bold">Dec 2023 - Present</h3>
+        <h3 className="text-opacity-75 text-default text-lg md:text-xl font-bold">Dec 2023 - July 2024</h3>
         <HorDivider gradient={false} />
       </div>
 
