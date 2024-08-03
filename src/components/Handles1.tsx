@@ -32,12 +32,22 @@ export default function Handles() {
           hastrom@mit.edu
         </div>
       </div>
-      <IconLink href="https://github.com/hectorastrom">
-        <FaGithub />
-      </IconLink>
-      <IconLink href="https://www.linkedin.com/in/hectorastrom">
-        <FaLinkedin />
-      </IconLink>
+      <div className="relative group">
+        <IconLink href="https://github.com/hectorastrom">
+          <FaGithub />
+        </IconLink>
+        <div className="absolute left-1/2 transform -translate-x-1/2 bottom-full mb-2 px-2 py-1 text-sm text-white bg-default bg-opacity-85 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          @hectorastrom
+        </div>
+      </div>
+      <div className="relative group">
+        <IconLink href="https://www.linkedin.com/in/hectorastrom">
+          <FaLinkedin />
+        </IconLink>
+        <div className="absolute left-1/2 transform -translate-x-1/2 bottom-full mb-2 px-2 py-1 text-sm text-white bg-default bg-opacity-85 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          @hectorastrom
+        </div>
+      </div>
     </div>
   );
 }

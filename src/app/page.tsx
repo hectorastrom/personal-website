@@ -21,23 +21,28 @@ export default function Home() {
         </p>
 
         <p>
-          My main interest lies at the intersection of{" "}
-          <span className="">machine learning</span> and
-          <span className=""> healthcare</span>. I&apos;m also a{" "}
+          My main interest lies in applying machine learning to various fields,
+          particularly{" "}
+          <span className="">healthcare</span> and
+          <span className=""> education</span>. I&apos;m also a committed {" "}
           <a
             className="custom-link"
             target="_blank"
             href="https://mitathletics.com/sports/mcrewlt"
           >
-            committed rower,
+            rower,
           </a>{" "}
-          nature lover, and an obsessive learner.
+          outdoorsman, and an obsessive learner.
         </p>
 
         <span>
           Come see what I&apos;m up to this{" "}
-          <Link href={"/projects"} className="custom-link">
+          <Link href={"/projects/circa"} className="custom-link">
             summer,
+          </Link>{" "}
+          browse my previous{" "}
+          <Link href={"/projects"} className="custom-link">
+          work
           </Link>{" "}
           {/* read my{" "}
           <Link href={"/blog"} className="custom-link">
@@ -45,7 +50,7 @@ export default function Home() {
           </Link>{" "} */}
           or{" "}
           <Link href={"mailto:hastrom@mit.edu"} className="custom-link">
-            connect
+          connect
           </Link>{" "}
           with me on a project!
         </span>
