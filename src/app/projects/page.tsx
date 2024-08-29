@@ -12,6 +12,12 @@ import Image from "next/image";
 import fs from "fs";
 import path from "path";
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Hector - Projects",
+  description: "Hector's Personal Projects",
+};
 
 // Define the structure of the project data
 interface Project {

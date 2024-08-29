@@ -8,6 +8,12 @@ import {
 } from "@/components/ui/card";
 import { GiRoundStar } from "react-icons/gi";
 import HorDivider from "@/components/HorDivider";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Hector - Work",
+  description: "Hector's Previous Work Experiences",
+};
 
 export default function Page() {
   const courses: { [key: string]: string } = {

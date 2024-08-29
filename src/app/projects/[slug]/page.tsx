@@ -6,6 +6,7 @@ import { IoMdArrowRoundBack } from "react-icons/io";
 import Link from "next/link";
 import HorDivider from "@/components/HorDivider";
 import HoverGif from "@/components/HoverGif";
+import type { Metadata } from "next";
 
 type TeamMember = {
   [name: string]: string;
@@ -45,6 +46,26 @@ export async function generateStaticParams() {
   const { projects } = getProjectData();
   return projects.map((project: { id: string }) => ({ slug: project.id }));
 }
+
+// Dynamically generate metadata based on the project slug
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}): Promise<Metadata> {
+  const { projects } = getProjectData();
+  const project = projects.find((p: Project) => p.id === params.slug);
+
+  if (!project) {
+    notFound();
+  }
+
+  return {
+    title: `Hector Project's - ${project.name}`,
+    description: project.description,
+  };
+}
+
 
 export default function ProjectPage({ params }: { params: { slug: string } }) {
   const { projects } = getProjectData();
