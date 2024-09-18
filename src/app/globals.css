@@ -15,6 +15,13 @@
   font-style: normal;
 }
 
+html,
+body {
+  /* slate-50 */
+  background-color: rgb(248 250 252); 
+  transition: background-color 0.1s ease-in-out;
+}
+
 
 body::before {
   background: inherit;
