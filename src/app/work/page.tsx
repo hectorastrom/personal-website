@@ -17,11 +17,12 @@ export const metadata: Metadata = {
 
 export default function Page() {
   const courses: { [key: string]: string } = {
+    "6.3900": "Introduction to Machine Learning",
     "6.1010": "Fundamentals of Programming",
     "6.1210": "Introduction to Algorithms",
     "6.1200": "Math for Computer Science",
     "18.06": "Linear Algebra",
-    // "6.3900": "Introduction to Machine Learning",
+    "6.2000": "Circuits and Electronics",
   };
 
 
