@@ -22,9 +22,8 @@ export default function Home() {
 
         <p>
           My main interest lies in applying machine learning to various fields,
-          particularly{" "}
-          <span className="">healthcare</span> and
-          <span className=""> education</span>. I&apos;m also a committed {" "}
+          particularly <span className="">healthcare</span> and
+          <span className=""> education</span>. I&apos;m also a committed{" "}
           <a
             className="custom-link"
             target="_blank"
@@ -36,21 +35,22 @@ export default function Home() {
         </p>
 
         <span>
-          Come see what I&apos;m up to this{" "}
-          <Link href={"/projects/circa"} className="custom-link">
-            summer,
-          </Link>{" "}
-          browse my previous{" "}
+          This fall, I&apos;m taking classes in machine learning, circuits, and
+          biotech. In between, I&apos;m participating in{" "}
+          <a
+            className="custom-link"
+            target="_blank"
+            href="https://www.instagram.com/p/DBHa-eJJV6R/?img_index=1"
+          >
+            hackathons
+          </a>{" "}
+          and refining my espresso-making skills. Check out my latest{" "}
           <Link href={"/projects"} className="custom-link">
-          work
+            work
           </Link>{" "}
-          {/* read my{" "}
-          <Link href={"/blog"} className="custom-link">
-            blog,
-          </Link>{" "} */}
           or{" "}
           <Link href={"mailto:hastrom@mit.edu"} className="custom-link">
-          connect
+            connect
           </Link>{" "}
           with me on a project!
         </span>
