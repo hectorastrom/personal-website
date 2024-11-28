@@ -2,13 +2,13 @@ import { ReactNode } from "react";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 
-// Define the props type for IconLink
+
 interface IconLinkProps {
   href: string;
   children: ReactNode;
 }
 
-// Reusable IconLink component with typed props
+
 function IconLink({ href, children }: IconLinkProps) {
   return (
     <a
@@ -28,7 +28,7 @@ export default function Handles() {
         <IconLink href="mailto:hastrom@mit.edu">
           <MdEmail />
         </IconLink>
-        <div className="absolute left-1/2 transform -translate-x-1/2 bottom-full mb-2 px-2 py-1 text-sm text-white bg-default bg-opacity-85 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <div className="absolute left-1/2 transform -translate-x-1/2 bottom-full mb-2 px-2 py-1 text-sm text-white bg-default bg-opacity-85 rounded-lg opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity duration-300">
           hastrom@mit.edu
         </div>
       </div>
@@ -36,7 +36,7 @@ export default function Handles() {
         <IconLink href="https://github.com/hectorastrom">
           <FaGithub />
         </IconLink>
-        <div className="absolute left-1/2 transform -translate-x-1/2 bottom-full mb-2 px-2 py-1 text-sm text-white bg-default bg-opacity-85 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <div className="absolute left-1/2 transform -translate-x-1/2 bottom-full mb-2 px-2 py-1 text-sm text-white bg-default bg-opacity-85 rounded-lg opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity duration-300">
           @hectorastrom
         </div>
       </div>
@@ -44,7 +44,7 @@ export default function Handles() {
         <IconLink href="https://www.linkedin.com/in/hectorastrom">
           <FaLinkedin />
         </IconLink>
-        <div className="absolute left-1/2 transform -translate-x-1/2 bottom-full mb-2 px-2 py-1 text-sm text-white bg-default bg-opacity-85 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <div className="absolute left-1/2 transform -translate-x-1/2 bottom-full mb-2 px-2 py-1 text-sm text-white bg-default bg-opacity-85 rounded-lg opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity duration-300">
           @hectorastrom
         </div>
       </div>
