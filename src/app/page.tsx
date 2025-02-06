@@ -36,15 +36,15 @@ export default function Home() {
 
         <span>
           Over the spring, I&apos;m learning all about the low-level
-          architecture of computers, finally (hopefully) understanding
-          probability, and grounding myself with classes in French and ethics.
+          architecture of computers, finally understanding probability
+          (hopefully), and grounding myself with courses in French and ethics.
         </span>
         <span>
           Beyond classes, I&apos;m continuing my{" "}
           <Link href={"/work"} className="custom-link">
             research
-          </Link>
-          {" "}at the Brain and Cognitive Sciences, working my way through the{" "}
+          </Link>{" "}
+          at the Brain and Cognitive Sciences, working my way through the{" "}
           <a
             className="custom-link"
             target="_blank"
@@ -52,8 +52,8 @@ export default function Home() {
           >
             ARENA
           </a>{" "}
-          curriculum, and getting ready for a gritty spring season.
-           Check out my latest{" "}
+          curriculum, and getting ready for a gritty spring season. Check out my
+          latest{" "}
           <Link href={"/projects"} className="custom-link">
             work
           </Link>{" "}
