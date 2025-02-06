@@ -16,11 +16,15 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
+  // Links automatically created. Items in this exact order
   const courses: { [key: string]: string } = {
     "6.3900": "Introduction to Machine Learning",
+    "6.1910": "Computation Structures",
     "6.1010": "Fundamentals of Programming",
     "6.1210": "Introduction to Algorithms",
+    "6.1903": "C and Assembly",
     "6.1200": "Math for Computer Science",
+    "18.600": "Probability and Random Variables",
     "18.06": "Linear Algebra",
     "6.2000": "Circuits and Electronics",
   };
@@ -33,7 +37,47 @@ export default function Page() {
       </h1>
 
       <div className="py-4">
-        <h3 className="text-opacity-75 text-default text-lg md:text-xl font-bold">Dec 2023 - Jul 2024</h3>
+        <h3 className="text-opacity-75 text-default text-lg md:text-xl font-bold">
+          Jan 2025 - Now
+        </h3>
+        <HorDivider gradient={false} />
+      </div>
+
+      <Card>
+        <CardHeader>
+          <CardTitle>MIT Brain & Cognitive Sciences</CardTitle>
+          <CardDescription>
+            Researcher @ Boyden Lab
+          </CardDescription>
+        </CardHeader>
+        {/* <CardContent>
+          <ul className="space-y-2 mb-2">
+            <li>
+            </li>
+          </ul>
+        </CardContent> */}
+        <CardFooter className="flex flex-row gap-x-4 md:gap-x-8">
+          <a
+            href="https://synthneuro.org/publications/scaling-properties-for-artificial-neural-network-models-of-a-small-nervous-system/"
+            target="_blank"
+            className="text-lg md:text-xl text-emphasis font-normal hover:saturate-200"
+          >
+            Overview
+          </a>
+          <a
+            href="https://github.com/qsimeon/worm-data-preprocess"
+            target="_blank"
+            className="text-lg md:text-xl text-emphasis font-normal hover:saturate-200"
+          >
+            GitHub
+          </a>
+        </CardFooter>
+      </Card>
+
+      <div className="py-4">
+        <h3 className="text-opacity-75 text-default text-lg md:text-xl font-bold">
+          Dec 2023 - Jul 2024
+        </h3>
         <HorDivider gradient={false} />
       </div>
 
@@ -59,11 +103,14 @@ export default function Page() {
               </a>{" "}
               using pandas, SciPy, and SQL
             </li>
-            <li>- Investigated machine learning architectures to predict restoration from psychoacoustic features of soundscapes</li>
+            <li>
+              - Investigated machine learning architectures to predict
+              restoration from psychoacoustic features of soundscapes
+            </li>
             <li>
               - Awarded{" "}
-              <GiRoundStar className="inline-block text-amber-400 mb-1" /> 2024 MIT
-              Outstanding UROP Student Award{" "}
+              <GiRoundStar className="inline-block text-amber-400 mb-1" /> 2024
+              MIT Outstanding UROP Student Award{" "}
               <GiRoundStar className="inline-block text-amber-400 mb-1" />{" "}
               following InterNoise 2024 Abstract Submission
             </li>

@@ -35,16 +35,25 @@ export default function Home() {
         </p>
 
         <span>
-          This fall, I&apos;m taking classes in machine learning, circuits, and
-          biotech. In between, I&apos;m participating in{" "}
+          Over the spring, I&apos;m learning all about the low-level
+          architecture of computers, finally (hopefully) understanding
+          probability, and grounding myself with classes in French and ethics.
+        </span>
+        <span>
+          Beyond classes, I&apos;m continuing my{" "}
+          <Link href={"/work"} className="custom-link">
+            research
+          </Link>
+          {" "}at the Brain and Cognitive Sciences, working my way through the{" "}
           <a
             className="custom-link"
             target="_blank"
-            href="https://www.instagram.com/p/DBHa-eJJV6R/?img_index=1"
+            href="https://arena-chapter1-transformer-interp.streamlit.app/"
           >
-            hackathons
+            ARENA
           </a>{" "}
-          and refining my espresso-making skills. Check out my latest{" "}
+          curriculum, and getting ready for a gritty spring season.
+           Check out my latest{" "}
           <Link href={"/projects"} className="custom-link">
             work
           </Link>{" "}

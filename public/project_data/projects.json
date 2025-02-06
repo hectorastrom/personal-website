@@ -20,7 +20,7 @@
       "ss_path": "geompt169_ss.png",
       "gif_path": "geompt_gif.gif",
       "name": "GeomPT",
-      "date": "2024 - Present",
+      "date": "2024",
       "description": "AI-powered physical therapy platform to improve patient recovery outcomes through data-driven insights.",
       "tags": [
         "OpenCV",
@@ -30,7 +30,7 @@
         "Next.js",
         "React"
       ],
-      "status": "in development",
+      "status": "sunset",
       "github": "https://github.com/orgs/GeomPT/repositories",
       "website": "https://drive.google.com/file/d/1R7GtYhcAP-BwZhLpbZXQBIYWqDoNPzsP/view?usp=sharing",
       "devpost": "https://ballot.hackmit.org/project/fnjby-pztke-ionsy-qebtg",
@@ -52,7 +52,7 @@
       "id": "circa",
       "image_path": "circa_logo.svg",
       "name": "Circa",
-      "date": "2024 - Present",
+      "date": "2024",
       "description": "Online learning platform emphasizing conceptual understanding through text-embedding transformer models.",
       "tags": [
         "HuggingFace",
@@ -63,7 +63,7 @@
         "Next.js",
         "React"
       ],
-      "status": "in development",
+      "status": "on pause",
       "github": "https://github.com/orgs/CircaLearn/repositories",
       "role": "Software Engineer",
       "overview": [
@@ -72,7 +72,8 @@
         "To evaluate a user's conceptual understanding, Circa quizzes users with items they're trying to learn, such as new words (e.g. prescience) or concepts (e.g. Gauss's Law). Users may choose to respond with text or speech, which is then processed using a HuggingFace Wav2Vec2 speech-to-text model. User responses are then embedded and semantically compared to the correct answers provided during setup to accurately assess understanding.",
         "Users have the option to discuss each concept they're trying to learn with a personalized LLM, equipped with an understanding of each users' goal and learning style.",
         "All of this processing is done on Circa's backend, which can be quickly accessed using a Python FastAPI server request.",
-        "The primary goal of Circa is to shift the focus of learning platforms, such as Quizlet, from mere memorization towards genuine understanding."
+        "The primary goal of Circa is to shift the focus of learning platforms, such as Quizlet, from mere memorization towards genuine understanding.",
+        "Until Circa is finished, I recommend 'Knowt.com'."
       ]
     },
     {
