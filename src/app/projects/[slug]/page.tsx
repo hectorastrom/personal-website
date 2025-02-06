@@ -127,9 +127,9 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
             <HorDivider />
           </div>
         )}
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-3 md:gap-8">
           {/* first col */}
-          <div>
+          <div className="md:col-span-1">
             <h2 className="text-lg md:text-xl font-bold text-emphasis mb-1">
               My Role
             </h2>
@@ -206,7 +206,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
           </div>
 
           {/* second col */}
-          <div>
+          <div className="md:col-span-2">
             <h2 className="text-lg md:text-xl font-bold text-emphasis mb-1">
               Overview
             </h2>
