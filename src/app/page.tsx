@@ -35,15 +35,24 @@ export default function Home() {
         </p>
 
         <span>
-          This summer, I&apos;ll be between SF and Cambridge building the
-          next-generation of health wearable: a device finally capable of{" "}
+          This summer, I&apos;ll be in SF and Cambridge building the
+          next-generation health wearable: a device finally capable of{" "}
           <a
             className="custom-link"
             target="_blank"
             href="https://lucidmonitor.com/"
           >
             monitoring the brain
-          </a>{""}.
+          </a>
+          {""}.
+        </span>
+        <span>
+          If that or any of my other work sounds interesting to you, don&apos;t
+          hesitate to{" "}
+          <Link href={"mailto:hastrom@mit.edu"} className="custom-link">
+            reach out
+          </Link>
+          {"."}
         </span>
       </div>
     </>
