@@ -46,16 +46,23 @@ export default function Page() {
       <Card>
         <CardHeader>
           <CardTitle>MIT Brain & Cognitive Sciences</CardTitle>
-          <CardDescription>
-            Researcher @ Boyden Lab
-          </CardDescription>
+          <CardDescription>Researcher @ Boyden Lab</CardDescription>
         </CardHeader>
-        {/* <CardContent>
+        <CardContent>
           <ul className="space-y-2 mb-2">
             <li>
+              - Homogenized and{" "}
+              <a
+                className="custom-link"
+                href="https://arxiv.org/abs/2411.12091"
+                target="_blank"
+              >
+                open-sourced neural datasets
+              </a>{" "}
+              for next time-step neural activity modeling in <i>C. elegans</i>.
             </li>
           </ul>
-        </CardContent> */}
+        </CardContent>
         <CardFooter className="flex flex-row gap-x-4 md:gap-x-8">
           <a
             href="https://synthneuro.org/publications/scaling-properties-for-artificial-neural-network-models-of-a-small-nervous-system/"
