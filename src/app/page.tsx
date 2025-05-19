@@ -23,7 +23,7 @@ export default function Home() {
         <p>
           My main interest lies in applying machine learning to various fields,
           particularly <span className="">healthcare</span> and
-          <span className=""> education</span>. I&apos;m also a committed{" "}
+          <span className=""> biotech</span>. I&apos;m also a committed{" "}
           <a
             className="custom-link"
             target="_blank"
@@ -35,33 +35,15 @@ export default function Home() {
         </p>
 
         <span>
-          Over the spring, I&apos;m learning all about the low-level
-          architecture of computers, finally understanding probability
-          (hopefully), and grounding myself with courses in French and ethics.
-        </span>
-        <span>
-          Beyond classes, I&apos;m continuing my{" "}
-          <Link href={"/work"} className="custom-link">
-            research
-          </Link>{" "}
-          at the Brain and Cognitive Sciences, working my way through the{" "}
+          This summer, I&apos;ll be between SF and Cambridge building the
+          next-generation of health wearable: a device finally capable of{" "}
           <a
             className="custom-link"
             target="_blank"
-            href="https://arena-chapter1-transformer-interp.streamlit.app/"
+            href="https://lucidmonitor.com/"
           >
-            ARENA
-          </a>{" "}
-          curriculum, and getting ready for a gritty spring season. Check out my
-          latest{" "}
-          <Link href={"/projects"} className="custom-link">
-            work
-          </Link>{" "}
-          or{" "}
-          <Link href={"mailto:hastrom@mit.edu"} className="custom-link">
-            connect
-          </Link>{" "}
-          with me on a project!
+            monitoring the brain
+          </a>{""}.
         </span>
       </div>
     </>
