@@ -157,20 +157,23 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
                 </ul>
               </>
             )}
-
-            <h2 className="text-lg md:text-xl font-bold text-emphasis mb-1">
-              Tools and Software
-            </h2>
-            <div className="flex flex-wrap">
-              {project.tags.map((tag: string) => (
-                <span
-                  key={tag}
-                  className="mr-2 mb-2 bg-gray-200 rounded-full px-2 py-1 text-sm md:text-base lg:text-base"
-                >
-                  {tag}
-                </span>
-              ))}
-            </div>
+            {project.tags && project.tags.length > 0 && (
+              <>
+                <h2 className="text-lg md:text-xl font-bold text-emphasis mb-1">
+                  Tools and Software
+                </h2>
+                <div className="flex flex-wrap">
+                  {project.tags.map((tag: string) => (
+                    <span
+                      key={tag}
+                      className="mr-2 mb-2 bg-gray-200 rounded-full px-2 py-1 text-sm md:text-base lg:text-base"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </>
+            )}
 
             {links.length > 0 && (
               <div className="mt-4">

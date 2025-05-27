@@ -38,7 +38,7 @@ export default function Page() {
 
       <div className="py-4">
         <h3 className="text-opacity-75 text-default text-lg md:text-xl font-bold">
-          Jan 2025 - Now
+          Jan 2025 - May 2025
         </h3>
         <HorDivider gradient={false} />
       </div>
@@ -143,7 +143,7 @@ export default function Page() {
 
       {/* school information */}
       <h1 className="text-2xl lg:text-3xl text-emphasis font-bold pb-4 mt-12">
-        Relevant Coursework
+        Classes
       </h1>
       <ul className="space-y-2">
         {Object.entries(courses).map(([courseCode, courseName]) => (

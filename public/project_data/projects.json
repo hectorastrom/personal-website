@@ -15,6 +15,23 @@
   },
   "projects": [
     {
+      "id": "lucid",
+      "image_path": "lucid_logo.png",
+      "name": "lucid",
+      "date": "2025",
+      "description": "The wearable for your brain: built to optimize your cognitive & physical health.",
+      "tags": [],
+      "status": "ongoing",
+      "website": "https://lucidmonitor.com",
+      "role": "Cofounder & CEO",
+      "overview": [
+        "Lucid is the first continuous brain wearable, a device that tracks both brain waves and physical metrics to optimize your cognitive and physical health. By making continuous brain monitoring accessible, we’re laying the groundwork for a powerful preventative health tool, capable of detecting neurodegenerative disease, epilepsy, and cognitive decline."
+      ],
+      "team": [
+        { "Ryan Yue": "Cofounder & CTO" }
+      ]
+    },
+    {
       "id": "geompt",
       "image_path": "geomptlogo.png",
       "ss_path": "geompt169_ss.png",
@@ -22,24 +39,17 @@
       "name": "GeomPT",
       "date": "2024",
       "description": "AI-powered physical therapy platform to improve patient recovery outcomes through data-driven insights.",
-      "tags": [
-        "OpenCV",
-        "MediaPipe",
-        "Flask",
-        "Firebase",
-        "Next.js",
-        "React"
-      ],
+      "tags": ["OpenCV", "MediaPipe", "Flask", "Firebase", "Next.js", "React"],
       "status": "sunset",
       "github": "https://github.com/orgs/GeomPT/repositories",
       "website": "https://drive.google.com/file/d/1R7GtYhcAP-BwZhLpbZXQBIYWqDoNPzsP/view?usp=sharing",
       "devpost": "https://ballot.hackmit.org/project/fnjby-pztke-ionsy-qebtg",
       "role": "Technical Lead",
       "overview": [
-          "GeomPT is an AI-powered web platform for physical therapy providers to track and analyze patients' range of motion (ROM) over time, addressing patient non-adherence and improving rehabilitation outcomes through data-driven insights and enhanced plan-of-care adherence. The platform is designed to assist rather than replace professional physical therapists, supporting both the patient and provider throughout a prescribed program.",
-          "GeomPT organizes patient recovery plans, compiling all prescribed exercises in one place with video and text instructions, along with prescribed sets and reps for easy reference.",
-          "The platform leverages OpenCV and Mediapipe's Pose Model to automatically measure and track key joint angles during physical therapy exercises. By analyzing video data sent across websockets in real time, GeomPT provides clinicians and patients with granular recovery insights.",
-          "All patient progress and exercise data are securely stored in Firebase, allowing providers to review, monitor, and adjust treatment plans based on objective ROM metrics and patient performance trends. LLM data analysis provides 'at-a-glance' insights into patient health and recovery progress."
+        "GeomPT is an AI-powered web platform for physical therapy providers to track and analyze patients' range of motion (ROM) over time, addressing patient non-adherence and improving rehabilitation outcomes through data-driven insights and enhanced plan-of-care adherence. The platform is designed to assist rather than replace professional physical therapists, supporting both the patient and provider throughout a prescribed program.",
+        "GeomPT organizes patient recovery plans, compiling all prescribed exercises in one place with video and text instructions, along with prescribed sets and reps for easy reference.",
+        "The platform leverages OpenCV and Mediapipe's Pose Model to automatically measure and track key joint angles during physical therapy exercises. By analyzing video data sent across websockets in real time, GeomPT provides clinicians and patients with granular recovery insights.",
+        "All patient progress and exercise data are securely stored in Firebase, allowing providers to review, monitor, and adjust treatment plans based on objective ROM metrics and patient performance trends. LLM data analysis provides 'at-a-glance' insights into patient health and recovery progress."
       ],
       "note": "GeomPT was developed as part of HackMIT 2024, MIT's 24 hour hackathon. It earned second place overall out of 200+ teams.",
       "team": [
@@ -181,7 +191,7 @@
       "date": "2024 - Present",
       "description": "Active Next.js & React portfolio site.",
       "tags": ["Next.js", "React", "Tailwind"],
-      "status": "in development",
+      "status": "ongoing",
       "github": "https://github.com/hectorastrom/personal-website",
       "role": "Software Engineer",
       "overview": [
