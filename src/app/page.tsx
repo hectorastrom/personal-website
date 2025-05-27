@@ -1,3 +1,4 @@
+import React from "react";
 import NameTitle from "@/components/NameTitle";
 import Link from "next/link";
 
@@ -6,10 +7,10 @@ export default function Home() {
     <>
       <div className="flex flex-col gap-6">
         <div className="flex flex-row gap-4">
-          <NameTitle text="Hey there!" />
+          <NameTitle text="Hej!" />
         </div>
         <p>
-          I&apos;m Hector, a sophomore at{" "}
+          I&apos;m Hector, a rising junior at{" "}
           <a
             className="custom-link"
             target="_blank"
@@ -21,9 +22,8 @@ export default function Home() {
         </p>
 
         <p>
-          My main interest lies in applying machine learning to various fields,
-          particularly <span className="">healthcare</span> and
-          <span className=""> biotech</span>. I&apos;m also a committed{" "}
+          My main interest lies at the intersection of machine learning and biotech/neuroscience.
+          I&apos;m also a committed{" "}
           <a
             className="custom-link"
             target="_blank"
@@ -35,7 +35,7 @@ export default function Home() {
         </p>
 
         <span>
-          This summer, I&apos;ll be in SF and Cambridge building the
+          This summer, I&apos;ll be in SF building the
           next-generation health wearable: a device finally capable of{" "}
           <a
             className="custom-link"
