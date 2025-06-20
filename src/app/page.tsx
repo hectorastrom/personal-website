@@ -42,9 +42,9 @@ export default function Home() {
             target="_blank"
             href="https://lucidmonitor.com/"
           >
-            monitoring the brain
+            quantifying the brain.
           </a>
-          {""}.
+          {""}
         </span>
         <span>
           If that or any of my other work sounds interesting to you, don&apos;t
