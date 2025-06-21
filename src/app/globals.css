@@ -8,13 +8,6 @@
   --md: theme(screens.md)
 }
 
-@font-face {
-  font-family: 'TitleFont';
-  src: url('/fonts/gochihand.ttf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-}
-
 html,
 body {
   /* slate-50 */
@@ -37,6 +30,7 @@ body::before {
   display: inline-block;
   padding: 0 2px;
   font-weight: bold;
+  font-family: var(--font-emphasis);
 }
 
 /* Create the translucent underline */

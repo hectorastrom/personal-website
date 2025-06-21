@@ -28,7 +28,7 @@ const config: Config = {
         accent: "rgba(219, 39, 119, .3)", // rose-500
       },
       fontFamily: {
-        title: ["TitleFont", ...defaultTheme.fontFamily.sans],
+        emphasis: ["var(--font-emphasis)", ...defaultTheme.fontFamily.mono],
       },
       keyframes: {
         "accordion-down": {

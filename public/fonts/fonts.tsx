@@ -1,15 +1,16 @@
-import { Inter } from "next/font/google";
-import localFont from "next/font/local";
+import { David_Libre, Xanh_Mono } from "next/font/google";
 
-export const bodyFont = Inter({ 
+export const bodyFont = David_Libre({ 
   subsets: ["latin"], 
-  weight: ["400", "500", "600", "700", "800"],
+  weight: ["400", "500", "700"],
   display: 'swap',
   preload: true
 });
 
-export const titleFont = localFont({ 
-  src: "gochihand.ttf",
+export const emphasisFont = Xanh_Mono({ 
+  subsets: ["latin"], 
+  weight: ["400"],
+  style: ["normal", "italic"],
   display: 'swap',
   preload: true
 });

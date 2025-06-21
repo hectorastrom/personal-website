@@ -9,7 +9,8 @@ export default function NameTitle({text = "Hector Astrom", link=false} : NameTit
     return (
       <>
         <div
-          className={`font-title text-2xl sm:text-3xl font-bold text-emphasis -rotate-2 md:-rotate-3`}
+          className={`text-2xl sm:text-3xl font-bold text-emphasis`}
+          // className={`text-2xl sm:text-3xl font-bold text-emphasis -rotate-2 md:-rotate-3`}
         >
           {link ? (
             <Link className="shine-effect" href="/">

@@ -6,9 +6,9 @@ export default function Home() {
   return (
     <>
       <div className="flex flex-col gap-6">
-        <div className="flex flex-row gap-4">
+        {/* <div className="flex flex-row gap-4">
           <NameTitle text="Hej!" />
-        </div>
+        </div> */}
         <p>
           I&apos;m Hector, a rising junior at{" "}
           <a
