@@ -9,7 +9,7 @@ export default function Home() {
         {/* <div className="flex flex-row gap-4">
           <NameTitle text="Hej!" />
         </div> */}
-        <p>
+        <p className="text-2xl">
           I&apos;m Hector, a rising junior at{" "}
           <a
             className="custom-link"
@@ -21,7 +21,7 @@ export default function Home() {
           studying Computer Science & Electrical Engineering (6-2).
         </p>
 
-        <p>
+        <p className="text-2xl">
           My main interest lies at the intersection of machine learning and biotech/neuroscience.
           I&apos;m also a committed{" "}
           <a
@@ -34,7 +34,7 @@ export default function Home() {
           outdoorsman, and an obsessive learner.
         </p>
 
-        <span>
+        <span className="text-2xl">
           This summer, I&apos;ll be in SF building the
           next-generation health wearable: a device finally capable of{" "}
           <a
@@ -46,7 +46,7 @@ export default function Home() {
           </a>
           {""}
         </span>
-        <span>
+        <span className="text-2xl">
           If that or any of my other work sounds interesting to you, don&apos;t
           hesitate to{" "}
           <Link href={"mailto:hastrom@mit.edu"} className="custom-link">
