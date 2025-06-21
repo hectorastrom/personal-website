@@ -25,8 +25,8 @@ const HoverCard: React.FC<HoverCardProps> = ({
       const y = e.clientY - rect.top - rect.height / 2;
       const distance = Math.sqrt(x * x + y * y);
       const maxDistance = Math.max(rect.width, rect.height) / 2;
-      const moveX = (x / distance) * Math.min(distance, maxDistance) * 0.1;
-      const moveY = (y / distance) * Math.min(distance, maxDistance) * 0.1;
+      const moveX = (x / distance) * Math.min(distance, maxDistance) * 0.05;
+      const moveY = (y / distance) * Math.min(distance, maxDistance) * 0.05;
 
       card.style.transform = `translate(${moveX}px, ${moveY}px)`;
       card.style.zIndex = "10"; // still below navbar

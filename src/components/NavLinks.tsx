@@ -18,7 +18,7 @@ export default function NavLinks({ layout }: NavLinksProps) {
   const links = [
     { href: "/", label: "About" },
     { href: "/projects", label: "Projects" },
-    { href: "/work", label: "Work" },
+    // { href: "/work", label: "Work" },
     // { href: "/blog", label: "Blog" },
   ];
 

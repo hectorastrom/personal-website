@@ -16,7 +16,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Hector - Projects",
-  description: "Hector's Personal Projects",
+  description: "Things I've Built",
 };
 
 // Define the structure of the project data

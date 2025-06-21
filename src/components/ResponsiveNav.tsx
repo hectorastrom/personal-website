@@ -1,4 +1,4 @@
-import SideNav from "./SideNav1";
+import SideNav from "./SideNav";
 import TopNav from "./TopNav";
 
 interface ResponsiveNavProps {
