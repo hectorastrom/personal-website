@@ -7,6 +7,7 @@ import Link from "next/link";
 import HorDivider from "@/components/HorDivider";
 import HoverGif from "@/components/HoverGif";
 import type { Metadata } from "next";
+import { emphasisFont } from "@/lib/fonts";
 
 type TeamMember = {
   [name: string]: string;
@@ -88,7 +89,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
           {/* Back button, only on wide screens */}
           <Link
             href="/projects"
-            className="hidden sm:block text-emphasis font-normal hover:saturate-200"
+            className={`hidden sm:block text-emphasis font-normal hover:saturate-200 ${emphasisFont.className}`}
           >
             <div className="flex justify-start gap-1 mb-4">
               <IoMdArrowRoundBack className="text-3xl -mt-0.5" />
@@ -96,7 +97,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
             </div>
           </Link>
 
-          <h1 className="text-2xl md:text-4xl font-bold text-emphasis">
+          <h1 className={`text-2xl md:text-4xl font-bold text-emphasis ${emphasisFont.className}`}>
             {project.name}
           </h1>
           <span className="mt-6">
@@ -130,14 +131,14 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3 md:gap-8">
           {/* first col */}
           <div className="md:col-span-1">
-            <h2 className="text-lg md:text-xl font-bold text-emphasis mb-1">
+            <h2 className={`text-lg md:text-xl font-bold text-emphasis mb-1 ${emphasisFont.className}`}>
               My Role
             </h2>
             <p className="mb-2">{project.role}</p>
 
             {project.team && (
               <>
-                <h2 className="text-lg md:text-xl font-bold text-emphasis mb-1">
+                <h2 className={`text-lg md:text-xl font-bold text-emphasis mb-1 ${emphasisFont.className}`}>
                   Team
                 </h2>
                 {/* Fixed Code */}
@@ -159,7 +160,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
             )}
             {project.tags && project.tags.length > 0 && (
               <>
-                <h2 className="text-lg md:text-xl font-bold text-emphasis mb-1">
+                <h2 className={`text-lg md:text-xl font-bold text-emphasis mb-1 ${emphasisFont.className}`}>
                   Tools and Software
                 </h2>
                 <div className="flex flex-wrap">
@@ -177,10 +178,10 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
 
             {links.length > 0 && (
               <div className="mt-4">
-                <h2 className="text-lg md:text-xl font-bold text-emphasis mb-1">
+                <h2 className={`text-lg md:text-xl font-bold text-emphasis mb-1 ${emphasisFont.className}`}>
                   Links
                 </h2>
-                <ul className="flex flex-wrap gap-2 sm:gap-x-4 md:gap-x-8 text-lg md:text-xl text-emphasis font-normal">
+                <ul className={`flex flex-wrap gap-2 sm:gap-x-4 md:gap-x-8 text-lg md:text-xl text-emphasis font-normal ${emphasisFont.className}`}>
                   {links.map((link) => (
                     <li key={link.label}>
                       <a
@@ -198,7 +199,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
 
             {project.note && (
               <div className="mt-4">
-                <h2 className="text-emphasis font-bold mb-1 text-lg md:text-xl">
+                <h2 className={`text-emphasis font-bold mb-1 text-lg md:text-xl ${emphasisFont.className}`}>
                   Note
                 </h2>
                 <p className="text-opacity-50 text-sm md:text-base">
@@ -210,7 +211,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
 
           {/* second col */}
           <div className="md:col-span-2">
-            <h2 className="text-lg md:text-xl font-bold text-emphasis mb-1">
+            <h2 className={`text-lg md:text-xl font-bold text-emphasis mb-1 ${emphasisFont.className}`}>
               Overview
             </h2>
             <div>

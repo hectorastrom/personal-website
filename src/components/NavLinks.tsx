@@ -1,5 +1,6 @@
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import { emphasisFont } from "@/lib/fonts";
 
 interface NavLinksProps {
   layout: "top" | "side";
@@ -35,7 +36,7 @@ export default function NavLinks({ layout }: NavLinksProps) {
           <Link
             href={link.href}
             className={`
-              text-emphasis font-normal hover:saturate-200
+              text-emphasis font-normal hover:saturate-200 ${emphasisFont.className}
               ${
                 isActive(link.href)
                   ? "underline decoration-accent decoration-3"

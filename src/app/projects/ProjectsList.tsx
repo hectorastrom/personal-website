@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { emphasisFont } from "@/lib/fonts";
 
 interface Project {
   id: string;
@@ -28,7 +29,7 @@ export default function ProjectsList({ projects }: ProjectsListProps) {
           className="block rounded-lg p-2 transition-colors duration-200"
         >
           <div className="flex justify-between items-center">
-            <h2 className="text-2xl font-bold text-body">
+            <h2 className={`text-2xl font-bold text-body hover:text-emphasis`}>
               {project.name}
             </h2>
             <span className="text-sm text-gray-500 dark:text-gray-400">

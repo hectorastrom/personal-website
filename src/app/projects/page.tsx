@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import Link from "next/link";
 import ProjectsList from "./ProjectsList";
+import { emphasisFont } from "@/lib/fonts";
 
 // Define the structure of the project data
 interface Project {
@@ -38,7 +39,7 @@ export default function Page() {
 
   return (
     <>
-      <h1 className="text-2xl md:text-3xl text-emphasis font-bold pb-6">
+      <h1 className={`text-2xl md:text-3xl text-emphasis font-bold ${emphasisFont.className} pb-6`}>
         Projects
       </h1>
       <ProjectsList projects={projects} />

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { emphasisFont } from "@/lib/fonts";
 
 interface NameTitleProps {
     text? : string;
@@ -9,8 +10,8 @@ export default function NameTitle({text = "Hector Astrom", link=false} : NameTit
     return (
       <>
         <div
-          className={`text-2xl sm:text-3xl font-bold text-emphasis`}
-          // className={`text-2xl sm:text-3xl font-bold text-emphasis -rotate-2 md:-rotate-3`}
+          className={`text-2xl sm:text-3xl font-bold text-emphasis ${emphasisFont.className}`}
+          // className={`text-2xl sm:text-3xl font-bold text-emphasis ${emphasisFont.className} -rotate-2 md:-rotate-3`}
         >
           {link ? (
             <Link className="shine-effect" href="/">

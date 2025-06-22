@@ -1,5 +1,6 @@
 import { FaHammer } from "react-icons/fa";
 import Link from "next/link";
+import { emphasisFont } from "@/lib/fonts";
 
 export default function UnderConstruction() {
   return (
@@ -9,7 +10,7 @@ export default function UnderConstruction() {
         <h1 className="text-3xl">
           This page is still under construction. Please check back soon!
         </h1>
-        <Link href="/" className="custom-link font-bold text-4xl">
+        <Link href="/" className={`custom-link font-bold text-4xl ${emphasisFont.className}`}>
           Return home
         </Link>
       </div>

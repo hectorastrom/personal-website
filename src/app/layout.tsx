@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { bodyFont, emphasisFont } from "../../public/fonts/fonts";
+import { bodyFont, emphasisFont } from "@/lib/fonts";
 import ResponsiveNav from "@/components/ResponsiveNav";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${bodyFont.className} ${emphasisFont.variable} bg-gradient-to-b from-slate-50 to-slate-100 text-xl text-default antialiased min-h-screen`}
+        className={`${bodyFont.className} bg-gradient-to-b from-slate-50 to-slate-100 text-xl text-default antialiased min-h-screen`}
       >
         <div className="px-10 pb-24 mt-24 grid grid-rows-auto md:grid-cols-[max-content,minmax(0,48rem)] md:justify-center md:gap-x-12 max-w-full">
           <ResponsiveNav className="self-start" />

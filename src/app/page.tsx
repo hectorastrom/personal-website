@@ -1,6 +1,7 @@
 import React from "react";
 import NameTitle from "@/components/NameTitle";
 import Link from "next/link";
+import { emphasisFont } from "@/lib/fonts";
 
 export default function Home() {
   return (
@@ -12,7 +13,7 @@ export default function Home() {
         <p className="text-2xl">
           I&apos;m Hector, a rising junior at{" "}
           <a
-            className="custom-link"
+            className={`custom-link ${emphasisFont.className}`}
             target="_blank"
             href="https://www.eecs.mit.edu/"
           >
@@ -25,7 +26,7 @@ export default function Home() {
           My main interest lies at the intersection of machine learning and biotech/neuroscience.
           I&apos;m also a committed{" "}
           <a
-            className="custom-link"
+            className={`custom-link ${emphasisFont.className}`}
             target="_blank"
             href="https://mitathletics.com/sports/mcrewlt"
           >
@@ -38,7 +39,7 @@ export default function Home() {
           This summer, I&apos;ll be in SF building the
           next-generation health wearable: a device finally capable of{" "}
           <a
-            className="custom-link"
+            className={`custom-link ${emphasisFont.className}`}
             target="_blank"
             href="https://lucidmonitor.com/"
           >
@@ -49,7 +50,7 @@ export default function Home() {
         <span className="text-2xl">
           If that or any of my other work sounds interesting to you, don&apos;t
           hesitate to{" "}
-          <Link href={"mailto:hastrom@mit.edu"} className="custom-link">
+          <Link href={"mailto:hastrom@mit.edu"} className={`custom-link ${emphasisFont.className}`}>
             reach out
           </Link>
           {"."}
