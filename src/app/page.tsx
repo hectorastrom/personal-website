@@ -30,8 +30,8 @@ export default function Home() {
             target="_blank"
             href="https://mitathletics.com/sports/mcrewlt"
           >
-            rower,
-          </a>{" "}
+            rower
+          </a>{", "}
           outdoorsman, and an obsessive learner.
         </p>
 
