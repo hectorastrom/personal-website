@@ -1,5 +1,5 @@
 ## About
 
-My personal website.
+My personal website
 
-Created using Next.JS, Tailwind, and much love ;)
+Built mostly before the age of Cursor

@@ -2,8 +2,11 @@ import React from "react";
 import NameTitle from "@/components/NameTitle";
 import Link from "next/link";
 import { emphasisFont } from "@/lib/fonts";
+import LastUpdated from "@/components/LastUpdated";
+import { getLastCommit } from "@/lib/githubApi";
 
-export default function Home() {
+export default async function Home() {
+  const buildInfo = await getLastCommit();
   return (
     <>
       <div className="flex flex-col gap-6">
@@ -36,7 +39,7 @@ export default function Home() {
         </p>
 
         <span className="text-2xl">
-          This summer, I&apos;ll be in SF building the
+          I&apos;m currently in SF building the
           next-generation health wearable: a device finally capable of{" "}
           <a
             className={`custom-link ${emphasisFont.className}`}
@@ -48,13 +51,20 @@ export default function Home() {
           {""}
         </span>
         <span className="text-2xl">
-          If that or any of my other work sounds interesting to you, don&apos;t
-          hesitate to{" "}
+          If that or any of my other work sounds interesting to you,{" "}
           <Link href={"mailto:hastrom@mit.edu"} className={`custom-link ${emphasisFont.className}`}>
             reach out
           </Link>
           {"."}
         </span>
+        
+        <div className="mt-4 text-right">
+          <LastUpdated 
+            lastUpdated={buildInfo.lastUpdated}
+            commitHash={buildInfo.commitHash}
+            showCommitHash={false}
+          />
+        </div>
       </div>
     </>
   );
