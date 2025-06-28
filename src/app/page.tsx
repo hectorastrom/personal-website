@@ -14,7 +14,7 @@ export default async function Home() {
           <NameTitle text="Hej!" />
         </div> */}
         <p className="text-2xl">
-          I&apos;m Hector, a rising junior at{" "}
+          I&apos;m Hector, a junior at{" "}
           <a
             className={`custom-link ${emphasisFont.className}`}
             target="_blank"
@@ -22,7 +22,7 @@ export default async function Home() {
           >
             MIT
           </a>{" "}
-          studying Computer Science & Electrical Engineering (6-2).
+          studying EECS (6-2).
         </p>
 
         <p className="text-2xl">
@@ -58,7 +58,7 @@ export default async function Home() {
           {"."}
         </span>
         
-        <div className="mt-4 text-right">
+        <div className="mt-2 text-right">
           <LastUpdated 
             lastUpdated={buildInfo.lastUpdated}
             commitHash={buildInfo.commitHash}
