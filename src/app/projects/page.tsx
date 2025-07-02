@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 import Link from "next/link";
-import ProjectsList from "./ProjectsList";
+import ProjectsList from "@/components/ProjectsList";
 import { emphasisFont } from "@/lib/fonts";
 
 // Define the structure of the project data
@@ -9,6 +9,7 @@ interface Project {
   id: string;
   name: string;
   date: string;
+  image_path: string;
 }
 
 export default function Page() {
