@@ -10,9 +10,9 @@ export default async function Home() {
   return (
     <>
       <div className="flex flex-col gap-6">
-        {/* <div className="flex flex-row gap-4">
-          <NameTitle text="Hej!" />
-        </div> */}
+        <div className="flex flex-row gap-4">
+          <NameTitle text="Välkommen!" />
+        </div>
         <p className="text-2xl">
           I&apos;m Hector, a junior at{" "}
           <a
@@ -26,21 +26,22 @@ export default async function Home() {
         </p>
 
         <p className="text-2xl">
-          My main interest lies at the intersection of machine learning and biotech/neuroscience.
-          I&apos;m also a committed{" "}
+          My main interest lies at the intersection of machine learning and
+          biotech/neuroscience. I&apos;m also a committed{" "}
           <a
             className={`custom-link ${emphasisFont.className}`}
             target="_blank"
             href="https://mitathletics.com/sports/mcrewlt"
           >
             rower
-          </a>{", "}
+          </a>
+          {", "}
           outdoorsman, and an obsessive learner.
         </p>
 
         <span className="text-2xl">
-          I&apos;m currently in SF building the
-          next-generation health wearable: a device finally capable of{" "}
+          I&apos;m currently in SF building the next-generation health wearable:
+          a device finally capable of{" "}
           <a
             className={`custom-link ${emphasisFont.className}`}
             target="_blank"
@@ -52,14 +53,17 @@ export default async function Home() {
         </span>
         <span className="text-2xl">
           If that or any of my other work sounds interesting to you,{" "}
-          <Link href={"mailto:hastrom@mit.edu"} className={`custom-link ${emphasisFont.className}`}>
+          <Link
+            href={"mailto:hastrom@mit.edu"}
+            className={`custom-link ${emphasisFont.className}`}
+          >
             reach out
           </Link>
           {"."}
         </span>
-        
+
         <div className="mt-2 text-right">
-          <LastUpdated 
+          <LastUpdated
             lastUpdated={buildInfo.lastUpdated}
             commitHash={buildInfo.commitHash}
             showCommitHash={false}

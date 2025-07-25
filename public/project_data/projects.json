@@ -17,18 +17,19 @@
     {
       "id": "lucid",
       "image_path": "lucid_logo.png",
-      "name": "Lucid",
+      "name": "Lucid Labs",
       "date": "2025",
-      "description": "The wearable for your brain: built to optimize your cognitive & physical health.",
+      "description": "The first continuous brain wearable: built to optimize your cognitive & physical health.",
       "tags": [],
       "status": "ongoing",
       "website": "https://lucidmonitor.com",
-      "role": "Cofounder & CEO",
+      "role": "CEO",
       "overview": [
         "Lucid is the first continuous brain wearable, a device that tracks both brain waves and physical metrics to optimize your cognitive and physical health. By making continuous brain monitoring accessible, we’re laying the groundwork for a powerful preventative health tool, capable of detecting neurodegenerative disease, epilepsy, and cognitive decline."
       ],
       "team": [
-        { "Ryan Yue": "Cofounder & CTO" }
+        { "Ryan Yue": "CTO" },
+        { "Trevor Xing-Xie": "CSO" }
       ]
     },
     {
