@@ -22,10 +22,13 @@
       "description": "The first continuous brain wearable: built to optimize your cognitive & physical health.",
       "tags": [],
       "status": "ongoing",
-      "website": "https://lucidmonitor.com",
       "role": "CEO",
       "overview": [
-        "Lucid is the first continuous brain wearable, a device that tracks both brain waves and physical metrics to optimize your cognitive and physical health. By making continuous brain monitoring accessible, we’re laying the groundwork for a powerful preventative health tool, capable of detecting neurodegenerative disease, epilepsy, and cognitive decline."
+        "Lucid is the always-on wearable for your brain, decoding neural activity to unlock peak cognitive health and performance.",
+
+        "The brain is our most volatile asset, yet it’s the only organ without proactive monitoring. Consumers track heart, sleep, and glucose with wearables, but remain blind to cognition. Without a feedback loop, workers waste focus, patients miss early warning signs, and society bears the rising cost of dementia.",
+
+        "Lucid turns bulky EEG headsets into a discreet, continuously wearable device. Our hyperfocus on developing brain foundation models (BFMs) enable us to classify focus, stress, and recovery with unprecedented accuracy, offering real-time cognitive insights. These everyday benefits are the first step toward our larger mission: a preventative health platform for detecting neurodegeneration, epilepsy, and cognitive decline."
       ],
       "team": [
         { "Ryan Yue": "CTO" },

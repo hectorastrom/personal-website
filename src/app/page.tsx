@@ -11,7 +11,7 @@ export default async function Home() {
     <>
       <div className="flex flex-col gap-6">
         <div className="flex flex-row gap-4">
-          <NameTitle text="Välkommen!" />
+          <NameTitle text="Hi!" />
         </div>
         <p className="text-2xl">
           I&apos;m Hector, a junior at{" "}
@@ -24,32 +24,21 @@ export default async function Home() {
           </a>{" "}
           studying EECS (6-2).
         </p>
-
         <p className="text-2xl">
-          My main interest lies at the intersection of machine learning and
-          biotech/neuroscience. I&apos;m also a committed{" "}
-          <a
-            className={`custom-link ${emphasisFont.className}`}
-            target="_blank"
-            href="https://mitathletics.com/sports/mcrewlt"
-          >
-            rower
-          </a>
-          {", "}
-          outdoorsman, and an obsessive learner.
+          My main interest lies at the intersection of deep learning and
+          biotech/neuroscience. I was once a competitive rower, love everything outdoors, and am an obsessive learner.
         </p>
 
         <span className="text-2xl">
-          I&apos;m currently in SF building the next-generation health wearable:
-          a device finally capable of{" "}
+          I&apos;m back in Cambridge continuing research on{" "}
           <a
             className={`custom-link ${emphasisFont.className}`}
             target="_blank"
             href="https://lucidmonitor.com/"
           >
-            quantifying the brain.
+            Lucid
           </a>
-          {""}
+          : a device finally capable of quantifying the brain.
         </span>
         <span className="text-2xl">
           If that or any of my other work sounds interesting to you,{" "}
