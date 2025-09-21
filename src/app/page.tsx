@@ -26,22 +26,26 @@ export default async function Home() {
         </p>
         <p className="text-2xl">
           My main interest lies at the intersection of deep learning and
-          biotech/neuroscience. I was once a competitive rower, love everything outdoors, and am an obsessive learner.
-        </p>
-
-        <span className="text-2xl">
-          I&apos;m back in Cambridge continuing research on{" "}
+          neuroscience. I used to{" "}
           <a
             className={`custom-link ${emphasisFont.className}`}
             target="_blank"
-            href="https://lucidmonitor.com/"
+            href="https://mitathletics.com/sports/mcrewlt"
           >
-            Lucid
+            row
           </a>
-          : a device finally capable of quantifying the brain.
-        </span>
+          {", "}
+          love everything outdoors, and am an obsessive learner.
+        </p>
+
         <span className="text-2xl">
-          If that or any of my other work sounds interesting to you,{" "}
+          I&apos;m back in Cambridge researching (SSL-based) brain foundation
+          models. However, I&apos;m still tuning my optimizer, descending to
+          whatever problem feels locally optimal.
+        </span>
+
+        <span className="text-2xl">
+          If I or any of my work sounds interesting to you, you should{" "}
           <Link
             href={"mailto:hastrom@mit.edu"}
             className={`custom-link ${emphasisFont.className}`}
@@ -62,4 +66,3 @@ export default async function Home() {
     </>
   );
 }
-
