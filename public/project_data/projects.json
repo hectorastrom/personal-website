@@ -15,14 +15,39 @@
   },
   "projects": [
     {
+      "id": "trinket",
+      "image_path": "trinket_logo.png",
+      "name": "Trinket",
+      "date": "2025",
+      "description": "Transform any photo into a 3D collectible.",
+      "tags": [],
+      "status": "ongoing",
+      "role": "Dev",
+      "overview": [
+        "[trinket.world](https://trinket.world) makes it effortless to capture and share digital memorabilia with friends. In one click, Trinket transforms a 2D image into a permanent, 3D collectible that can be shared with friends instantaneously.",
+
+        "Behind the scenes, each photo flows through a three-step pipeline: it’s uploaded to our Next.JS servers, stylized with a custom Nano Banana prompt through the Gemini API, then passed to a self-hosted mesh diffusion model (Hunyuan 3D 2.0) to generate a vivid 3D trinket -- all in under 30 seconds. Trinkets are stored as two images (original, nano render) and models (.glb files) in Supabase buckets. The frontend is hosted through Vercel.",
+
+        "Try it! (while I still have Supabase credits)"
+      ],
+      "team": [
+        { "Albert Astrom": "Dev" },
+        { "Christina Li": "Dev" },
+        { "Ryan Qiu": "Dev" }
+      ],
+      "note": "Trinket was developed as part of HackMIT 2025, MIT's 24 hour hackathon.",
+      "website": "https://trinket.world",
+      "ss_path": "trinket_ss.png"
+    },
+    {
       "id": "lucid",
       "image_path": "lucid_logo.png",
       "name": "Lucid Labs",
       "date": "2025",
       "description": "The first continuous brain wearable: built to optimize your cognitive & physical health.",
       "tags": [],
-      "status": "ongoing",
-      "role": "CEO",
+      "status": "former",
+      "role": "Cofounder",
       "overview": [
         "Lucid is the always-on wearable for your brain, decoding neural activity to unlock peak cognitive health and performance.",
 
@@ -30,10 +55,7 @@
 
         "Lucid turns bulky EEG headsets into a discreet, continuously wearable device. Our hyperfocus on developing brain foundation models (BFMs) enable us to classify focus, stress, and recovery with unprecedented accuracy, offering real-time cognitive insights. These everyday benefits are the first step toward our larger mission: a preventative health platform for detecting neurodegeneration, epilepsy, and cognitive decline."
       ],
-      "team": [
-        { "Ryan Yue": "CTO" },
-        { "Trevor Xing-Xie": "CSO" }
-      ]
+      "team": [{ "Ryan Yue": "Cofounder" }, { "Trevor Xing-Xie": "Cofounder" }]
     },
     {
       "id": "geompt",
@@ -47,7 +69,7 @@
       "status": "sunset",
       "github": "https://github.com/orgs/GeomPT/repositories",
       "website": "https://drive.google.com/file/d/1R7GtYhcAP-BwZhLpbZXQBIYWqDoNPzsP/view?usp=sharing",
-      "devpost": "https://ballot.hackmit.org/project/fnjby-pztke-ionsy-qebtg",
+      "hackathon_page": "https://ballot.hackmit.org/project/fnjby-pztke-ionsy-qebtg",
       "role": "Technical Lead",
       "overview": [
         "GeomPT is an AI-powered web platform for physical therapy providers to track and analyze patients' range of motion (ROM) over time, addressing patient non-adherence and improving rehabilitation outcomes through data-driven insights and enhanced plan-of-care adherence. The platform is designed to assist rather than replace professional physical therapists, supporting both the patient and provider throughout a prescribed program.",
@@ -127,7 +149,7 @@
       ],
       "status": "sunset",
       "github": "https://github.com/Brotherswords/HackMIT2023",
-      "devpost": "https://devpost.com/software/tim-text-into-music",
+      "hackathon_page": "https://devpost.com/software/tim-text-into-music",
       "role": "ML Engineer, Backend Developer",
       "overview": [
         "TiM (Text Into Music) is a revolutionary platform that adds bespoke soundtracks to your books. A React-built web app allows users to upload their favorite books so that our ML model will automatically map the text on each page to a suitable Spotify track, playing it live while users read. ",
@@ -152,7 +174,7 @@
       "status": "sunset",
       "tags": ["Next.js", "Tailwind", "Firebase", "Chrome-API"],
       "github": "https://github.com/albertastrom/stud",
-      "devpost": "https://devpost.com/software/stud-the-study-bud",
+      "hackathon_page": "https://devpost.com/software/stud-the-study-bud",
       "role": "Backend Developer",
       "overview": [
         "stud is a web app and Chrome extension that optimizes study sessions with a balanced approach of focus and rest.",

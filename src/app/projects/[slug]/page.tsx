@@ -25,7 +25,7 @@ type Project = {
   status: string;
   github?: string;
   website?: string;
-  devpost?: string;
+  hackathon_page?: string;
   role: string;
   overview: string[];
   note?: string;
@@ -67,7 +67,6 @@ export async function generateMetadata({
   };
 }
 
-
 export default function ProjectPage({ params }: { params: { slug: string } }) {
   const { projects } = getProjectData();
   const project = projects.find((p: Project) => p.id === params.slug);
@@ -79,7 +78,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
   const links = [
     { href: project.github, label: "GitHub" },
     { href: project.website, label: "Website" },
-    { href: project.devpost, label: "Devpost" },
+    { href: project.hackathon_page, label: "Hackathon Page" },
   ].filter((link) => link.href); // Filter out undefined links
 
   return (
@@ -97,7 +96,9 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
             </div>
           </Link>
 
-          <h1 className={`text-2xl md:text-4xl font-bold text-emphasis ${emphasisFont.className}`}>
+          <h1
+            className={`text-2xl md:text-4xl font-bold text-emphasis ${emphasisFont.className}`}
+          >
             {project.name}
           </h1>
           <span className="mt-6">
@@ -131,14 +132,18 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3 md:gap-8">
           {/* first col */}
           <div className="md:col-span-1">
-            <h2 className={`text-lg md:text-xl font-bold text-emphasis mb-1 ${emphasisFont.className}`}>
+            <h2
+              className={`text-lg md:text-xl font-bold text-emphasis mb-1 ${emphasisFont.className}`}
+            >
               My Role
             </h2>
             <p className="mb-2">{project.role}</p>
 
             {project.team && (
               <>
-                <h2 className={`text-lg md:text-xl font-bold text-emphasis mb-1 ${emphasisFont.className}`}>
+                <h2
+                  className={`text-lg md:text-xl font-bold text-emphasis mb-1 ${emphasisFont.className}`}
+                >
                   Team
                 </h2>
                 {/* Fixed Code */}
@@ -160,7 +165,9 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
             )}
             {project.tags && project.tags.length > 0 && (
               <>
-                <h2 className={`text-lg md:text-xl font-bold text-emphasis mb-1 ${emphasisFont.className}`}>
+                <h2
+                  className={`text-lg md:text-xl font-bold text-emphasis mb-1 ${emphasisFont.className}`}
+                >
                   Tools and Software
                 </h2>
                 <div className="flex flex-wrap">
@@ -178,10 +185,14 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
 
             {links.length > 0 && (
               <div className="mt-4">
-                <h2 className={`text-lg md:text-xl font-bold text-emphasis mb-1 ${emphasisFont.className}`}>
+                <h2
+                  className={`text-lg md:text-xl font-bold text-emphasis mb-1 ${emphasisFont.className}`}
+                >
                   Links
                 </h2>
-                <ul className={`flex flex-wrap gap-2 sm:gap-x-4 md:gap-x-8 text-lg md:text-xl text-emphasis font-normal ${emphasisFont.className}`}>
+                <ul
+                  className={`flex flex-wrap gap-2 sm:gap-x-4 md:gap-x-8 text-lg md:text-xl text-emphasis font-normal ${emphasisFont.className}`}
+                >
                   {links.map((link) => (
                     <li key={link.label}>
                       <a
@@ -199,7 +210,9 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
 
             {project.note && (
               <div className="mt-4">
-                <h2 className={`text-emphasis font-bold mb-1 text-lg md:text-xl ${emphasisFont.className}`}>
+                <h2
+                  className={`text-emphasis font-bold mb-1 text-lg md:text-xl ${emphasisFont.className}`}
+                >
                   Note
                 </h2>
                 <p className="text-opacity-50 text-sm md:text-base">
@@ -211,15 +224,51 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
 
           {/* second col */}
           <div className="md:col-span-2">
-            <h2 className={`text-lg md:text-xl font-bold text-emphasis mb-1 ${emphasisFont.className}`}>
+            <h2
+              className={`text-lg md:text-xl font-bold text-emphasis mb-1 ${emphasisFont.className}`}
+            >
               Overview
             </h2>
             <div>
-              {project.overview.map((line: string, index: number) => (
-                <p key={index} className="mb-4">
-                  {line}
-                </p>
-              ))}
+              {project.overview.map((line: string, index: number) => {
+                // replace md formatted links (1 per line max...)
+                if (line.includes("[") && line.includes("]")) {
+                  let link_title_start = line.indexOf("[");
+                  let link_title_end = line.indexOf("]");
+                  let link_url_start = line.indexOf("(");
+                  let link_url_end = line.indexOf(")");
+
+                  let before_text = line.substring(0, link_title_start);
+                  let link_text = line.substring(
+                    link_title_start + 1,
+                    link_title_end
+                  );
+                  let url = line.substring(link_url_start + 1, link_url_end);
+                  let after_text = line.substring(link_url_end + 1);
+
+                  return (
+                    <p key={index} className="mb-4">
+                      {before_text}
+                      {""}
+                      <a
+                        className={`custom-link ${emphasisFont.className}`}
+                        target="_blank"
+                        href={url}
+                      >
+                        {link_text}
+                      </a>
+                      {""}
+                      {after_text}
+                    </p>
+                  );
+                }
+
+                return (
+                  <p key={index} className="mb-4">
+                    {line}
+                  </p>
+                );
+              })}
             </div>
           </div>
         </div>
