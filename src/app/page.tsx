@@ -4,6 +4,7 @@ import Link from "next/link";
 import { emphasisFont } from "@/lib/fonts";
 import LastUpdated from "@/components/LastUpdated";
 import { getLastCommit } from "@/lib/githubApi";
+import { IoPin } from "react-icons/io5";
 
 export default async function Home() {
   const buildInfo = await getLastCommit();
@@ -24,28 +25,29 @@ export default async function Home() {
           </a>{" "}
           studying EECS (6-2).
         </p>
+
         <p className="text-2xl">
-          My main interest lies at the intersection of deep learning and
-          neuroscience. I used to{" "}
+          My research interests are in unsupervised learning, data
+          bootstrapping, and sample-efficient learning. Previously, my work has
+          played at the intersection of neuroscience and deep learning.
+        </p>
+
+        <p className="text-2xl">
+          I pursue{" "}
           <a
             className={`custom-link ${emphasisFont.className}`}
             target="_blank"
-            href="https://mitathletics.com/sports/mcrewlt"
+            rel="noopener noreferrer"
+            href="https://plato.stanford.edu/entries/aristotle-ethics/#HumaGoodFuncArgu"
           >
-            row
-          </a>
-          {", "}
-          love everything outdoors, and am an obsessive learner.
+            eudaimonia
+          </a>{" "}
+          through the quest of contributing a gigayear to humanity. I am only
+          interested in problems instrumental to this end.
         </p>
 
         <span className="text-2xl">
-          I&apos;m back in Cambridge researching (SSL-based) brain foundation
-          models. However, I&apos;m still tuning my optimizer, descending to
-          whatever problem feels locally optimal.
-        </span>
-
-        <span className="text-2xl">
-          If I or any of my work sounds interesting to you, you should{" "}
+          If you find me or my work interesting, you should{" "}
           <Link
             href={"mailto:hastrom@mit.edu"}
             className={`custom-link ${emphasisFont.className}`}
@@ -55,12 +57,18 @@ export default async function Home() {
           {"."}
         </span>
 
-        <div className="mt-2 text-right">
-          <LastUpdated
-            lastUpdated={buildInfo.lastUpdated}
-            commitHash={buildInfo.commitHash}
-            showCommitHash={false}
-          />
+        <div className="mt-2 text-sm text-gray-500 flex justify-between gap-2">
+          <div className="flex items-center gap-1 whitespace-nowrap">
+            <IoPin />
+            <span>Cambridge, MA</span>
+          </div>
+          <div>
+            <LastUpdated
+              lastUpdated={buildInfo.lastUpdated}
+              commitHash={buildInfo.commitHash}
+              showCommitHash={false}
+            />
+          </div>
         </div>
       </div>
     </>

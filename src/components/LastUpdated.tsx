@@ -25,7 +25,7 @@ export default function LastUpdated({
   };
 
   return (
-    <div className={`text-sm text-gray-500 flex items-center gap-2 justify-end ${className}`}>
+    <div className={`${className}`}>
       <span>Last updated: {formatDate(lastUpdated)}</span>
       {showCommitHash && commitHash && (
         <code className="text-xs bg-gray-100 px-1 py-0.5 rounded">
