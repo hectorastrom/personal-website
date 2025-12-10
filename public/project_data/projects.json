@@ -15,6 +15,29 @@
   },
   "projects": [
     {
+      "id": "gaussian-glasses",
+      "name": "Gaussian Glasses",
+      "image_path": "gg_logo.png",
+      "date": "2025",
+      "description": "Making camouflaged images classifier-legible through RL-optimized diffusion",
+      "tags": [],
+      "status": "sunset",
+      "role": "Dev",
+      "overview": [
+        "Research exploring the question 'can a diffusion prior be used as a label-preserving semantic denoiser for recognition?' We test this question on a dataset of camouflaged animals, seeing if the generative model can enhance the picture of the hidden animal.",
+
+        "TLDR: the results were largely unsuccessful. The task effectively transfers the burden of discrimination onto a generative model — a role in which it is inherently less capable than a purpose-built discriminative model.",
+
+        "Read the [blog](https://hectorastrom.github.io/gaussian-glasses/), or use the [ImageDDPO package](https://pypi.org/project/imageddpo/0.1.2/) for your own experiments."
+      ],
+      "team": [
+        { "Kevin Zhu": "" },
+        { "Luc Gaitskell": "" }
+      ],
+      "note": "Developed as part of my final project for 6.7960 in fall 2025.",
+      "website": "https://hectorastrom.github.io/gaussian-glasses/"
+    },
+    {
       "id": "trinket",
       "image_path": "trinket_logo.png",
       "name": "Trinket",
@@ -212,7 +235,6 @@
     {
       "id": "portfolio",
       "image_path": "borderless_portfolio.svg",
-      "ss_path": "portfolio169_ss.png",
       "name": "This Website",
       "date": "2024 - Present",
       "description": "Active Next.js & React portfolio site.",

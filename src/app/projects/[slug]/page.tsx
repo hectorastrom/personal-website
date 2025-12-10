@@ -81,6 +81,46 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
     { href: project.hackathon_page, label: "Hackathon Page" },
   ].filter((link) => link.href); // Filter out undefined links
 
+  const renderOverviewLine = (line: string, index: number) => {
+    const markdownLinkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
+    const parts: (string | JSX.Element)[] = [];
+    let lastIndex = 0;
+    let match;
+
+    while ((match = markdownLinkRegex.exec(line)) !== null) {
+      if (match.index > lastIndex) {
+        parts.push(line.substring(lastIndex, match.index));
+      }
+
+      parts.push(
+        <a
+          key={`link-${index}-${parts.length}`}
+          className={`custom-link ${emphasisFont.className}`}
+          target="_blank"
+          href={match[2]}
+        >
+          {match[1]}
+        </a>
+      );
+
+      lastIndex = markdownLinkRegex.lastIndex;
+    }
+
+    if (lastIndex < line.length) {
+      parts.push(line.substring(lastIndex));
+    }
+
+    if (parts.length === 0) {
+      parts.push(line);
+    }
+
+    return (
+      <p key={index} className="mb-4">
+        {parts}
+      </p>
+    );
+  };
+
   return (
     <>
       <div className="sm:-mt-6 md:-mt-8 min-h-screen text-default text-base md:text-lg">
@@ -185,11 +225,6 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
 
             {links.length > 0 && (
               <div className="mt-4">
-                <h2
-                  className={`text-lg md:text-xl font-bold text-emphasis mb-1 ${emphasisFont.className}`}
-                >
-                  Links
-                </h2>
                 <ul
                   className={`flex flex-wrap gap-2 sm:gap-x-4 md:gap-x-8 text-lg md:text-xl text-emphasis font-normal ${emphasisFont.className}`}
                 >
@@ -230,45 +265,9 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
               Overview
             </h2>
             <div>
-              {project.overview.map((line: string, index: number) => {
-                // replace md formatted links (1 per line max...)
-                if (line.includes("[") && line.includes("]")) {
-                  let link_title_start = line.indexOf("[");
-                  let link_title_end = line.indexOf("]");
-                  let link_url_start = line.indexOf("(");
-                  let link_url_end = line.indexOf(")");
-
-                  let before_text = line.substring(0, link_title_start);
-                  let link_text = line.substring(
-                    link_title_start + 1,
-                    link_title_end
-                  );
-                  let url = line.substring(link_url_start + 1, link_url_end);
-                  let after_text = line.substring(link_url_end + 1);
-
-                  return (
-                    <p key={index} className="mb-4">
-                      {before_text}
-                      {""}
-                      <a
-                        className={`custom-link ${emphasisFont.className}`}
-                        target="_blank"
-                        href={url}
-                      >
-                        {link_text}
-                      </a>
-                      {""}
-                      {after_text}
-                    </p>
-                  );
-                }
-
-                return (
-                  <p key={index} className="mb-4">
-                    {line}
-                  </p>
-                );
-              })}
+              {project.overview.map((line: string, index: number) =>
+                renderOverviewLine(line, index)
+              )}
             </div>
           </div>
         </div>
