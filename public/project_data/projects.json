@@ -18,6 +18,7 @@
       "id": "gaussian-glasses",
       "name": "Gaussian Glasses",
       "image_path": "gg_logo.png",
+      "ss_path": "gg_ss.png",
       "date": "2025",
       "description": "Making camouflaged images classifier-legible through RL-optimized diffusion",
       "tags": [],
