@@ -27,8 +27,7 @@ export default async function Home() {
         </p>
 
         <p className="text-2xl">
-          My research interests are in unsupervised learning, data
-          bootstrapping, and sample-efficient learning. Previously, my work has
+          My research interests are in representation learning, generative models, and sample-efficiency. Previously, my work has
           played at the intersection of neuroscience and deep learning.
         </p>
 
