@@ -24,7 +24,7 @@
       "status": "sunset",
       "role": "Dev",
       "overview": [
-        "Research exploring the question 'can a diffusion prior be used as a label-preserving semantic denoiser for recognition?' We test this question on a dataset of camouflaged animals, seeing if the generative model can enhance the picture of the hidden animal.",
+        "Research exploring: 'can a diffusion model restore discriminative structure in ambiguous or corrupted inputs?' We test this question on a dataset of camouflaged animals, seeing if the generative model can enhance the picture of the hidden animal.",
 
         "TLDR: the results were largely unsuccessful. The task effectively transfers the burden of discrimination onto a generative model — a role in which it is inherently less capable than a purpose-built discriminative model.",
 
