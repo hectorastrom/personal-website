@@ -27,8 +27,18 @@ export default async function Home() {
         </p>
 
         <p className="text-2xl">
-          My research interests are in representation learning, generative models, and sample-efficiency. Previously, my work has
-          played at the intersection of neuroscience and deep learning.
+          My research interests are in representation learning, generative
+          models, and sample-efficiency. Previously, my work has played at the
+          intersection of{" "}
+          <a
+            className={`custom-link ${emphasisFont.className}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            href="/projects/lucid"
+          >
+          neuroscience
+          </a>{" "}
+          and deep learning.
         </p>
 
         <p className="text-2xl">
@@ -59,7 +69,7 @@ export default async function Home() {
         <div className="mt-2 text-sm text-gray-500 flex justify-between gap-2">
           <div className="flex items-center gap-1 whitespace-nowrap">
             <IoPin />
-            <span>Cambridge, MA</span>
+            <span>Saltsjöbaden, Sweden</span>
           </div>
           <div>
             <LastUpdated
