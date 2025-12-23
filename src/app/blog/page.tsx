@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Metadata } from "next";
 import { getAllPostMetas } from "@/lib/posts";
+import { emphasisFont } from "@/lib/fonts";
 
 export const metadata: Metadata = {
   title: "Blog | Hector Astrom",
@@ -26,7 +27,11 @@ export default function BlogPage() {
 
   return (
     <div className="flex flex-col gap-8">
-      <h1 className="text-5xl font-bold text-slate-900">Blog</h1>
+      <h1
+        className={`text-2xl md:text-3xl text-emphasis font-bold ${emphasisFont.className} pb-6`}
+      >
+        Blog
+      </h1>
 
       {posts.length === 0 ? (
         <p className="text-slate-600">No posts yet. Check back soon.</p>
