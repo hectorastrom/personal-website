@@ -2,6 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "katex/dist/katex.min.css";
+@import "highlight.js/styles/github.css";
+
+/* Markdown code styling (used by rehype-highlight / highlight.js) */
+.hljs {
+  background: transparent !important;
+  padding: 0 !important;
+}
+
+/* Math rendering overrides */
+:root {
+  --math-text: #0f172a;
+}
+
+.katex,
+.katex * {
+  font-family: "KaTeX_Main", "Times New Roman", serif !important;
+  color: var(--math-text);
+}
+
+.katex-display {
+  margin: 1.25rem 0;
+}
+
+.katex-display > .katex {
+  display: inline-block;
+}
+
 :root {
   --emphasis-color: theme(colors.emphasis);
   --accent-color: theme(colors.accent);
