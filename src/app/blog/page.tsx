@@ -34,7 +34,7 @@ export default function BlogPage() {
       </h1>
 
       {posts.length === 0 ? (
-        <p className="text-slate-600">No posts yet. Check back soon.</p>
+        <p className="text-slate-600">Blog just added - no posts yet.</p>
       ) : (
         <div className="space-y-6">
           {groupEntries.map(([label, items]) => (
