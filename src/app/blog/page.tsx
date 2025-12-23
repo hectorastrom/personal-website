@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export const dynamic = "force-static";
 
 export default function BlogPage() {
-  const posts = getAllPostMetas();
+  const posts = getAllPostMetas().filter((post) => !post.hidden);
 
   const grouped = posts.reduce<Record<string, typeof posts>>((acc, post) => {
     const date = new Date(post.dateCreated);
@@ -34,7 +34,7 @@ export default function BlogPage() {
       </h1>
 
       {posts.length === 0 ? (
-        <p className="text-slate-600">Blog just added - no posts yet.</p>
+        <p className="text-slate-600">Blog just created - no posts yet.</p>
       ) : (
         <div className="space-y-6">
           {groupEntries.map(([label, items]) => (
@@ -43,11 +43,12 @@ export default function BlogPage() {
                 {label}
               </div>
               <div className="space-y-1">
-                {items.map((post) => (
+                {items.map((post, index) => (
                   <Link
                     key={post.slug}
                     href={`/blog/${post.slug}`}
                     className="flex items-center justify-between rounded-lg px-2 py-2 transition-colors duration-200 hover:bg-slate-100"
+                    tabindex={index+1}
                   >
                     <span className="text-2xl font-bold text-body hover:text-emphasis">
                       {post.title}

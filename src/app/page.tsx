@@ -36,23 +36,24 @@ export default async function Home() {
             rel="noopener noreferrer"
             href="/projects/lucid"
           >
-          neuroscience
+            neuroscience
           </a>{" "}
           and deep learning.
         </p>
 
         <p className="text-2xl">
-          I pursue{" "}
+          I pursue eudaimonia
+          through the quest of contributing a{" "}
           <a
             className={`custom-link ${emphasisFont.className}`}
             target="_blank"
             rel="noopener noreferrer"
-            href="https://plato.stanford.edu/entries/aristotle-ethics/#HumaGoodFuncArgu"
+            href="/blog/2025-12-23-gigayear"
           >
-            eudaimonia
+            gigayear
           </a>{" "}
-          through the quest of contributing a gigayear to humanity. I am only
-          interested in problems instrumental to this end.
+          to humanity. I am only interested in problems instrumental to this
+          end.
         </p>
 
         <span className="text-2xl">

@@ -3,6 +3,7 @@ import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
 import rehypeHighlight from "rehype-highlight";
 import { emphasisFont } from "@/lib/fonts";
+import MarkdownHr from "./MarkdownHr";
 
 const markdownComponents: Components = {
   h1: ({ children }) => (
@@ -64,7 +65,7 @@ const markdownComponents: Components = {
 
     return <code className={`font-mono ${className}`}>{children}</code>;
   },
-  hr: () => <hr className="border-slate-200 my-8" />,
+  hr: () => <MarkdownHr />,
   img: ({ src, alt }) => (
     <img
       src={src ?? ""}

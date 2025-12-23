@@ -6,7 +6,9 @@ interface SocialLinksProps {
 
 export default function SocialLinks({ variant }: SocialLinksProps) {
   const links = [
-    { href: "mailto:hastrom@mit.edu", label: "Mail" },
+    ...(variant === "side"
+      ? [{ href: "mailto:hastrom@mit.edu", label: "Contact" }]
+      : []),
     { href: "https://github.com/hectorastrom", label: "GitHub" },
     { href: "https://www.linkedin.com/in/hectorastrom", label: "LinkedIn" },
   ] as const;

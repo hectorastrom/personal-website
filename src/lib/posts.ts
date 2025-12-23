@@ -9,6 +9,7 @@ export type PostFrontmatter = {
   date_created: string;
   date_updated?: string;
   tags?: string[] | string;
+  hidden?: boolean | string;
 };
 
 export type PostMeta = {
@@ -18,6 +19,7 @@ export type PostMeta = {
   dateUpdated: string;
   tags: string[];
   excerpt: string;
+  hidden: boolean;
 };
 
 export type Post = PostMeta & {
@@ -44,13 +46,24 @@ function normalizeTags(rawTags: string[] | string | undefined): string[] {
     .filter(Boolean);
 }
 
+function normalizeHidden(rawHidden: boolean | string | undefined): boolean {
+  if (rawHidden === true) return true;
+  if (rawHidden === false || rawHidden == null) return false;
+  if (typeof rawHidden === "string") {
+    const lowered = rawHidden.trim().toLowerCase();
+    return lowered === "true" || lowered === "1" || lowered === "yes" || lowered === "y";
+  }
+  return false;
+}
+
 function parseFrontmatter(frontmatter: PostFrontmatter): {
   title: string;
   dateCreated: string;
   dateUpdated: string;
   tags: string[];
+  hidden: boolean;
 } {
-  const { title, date_created, date_updated, tags } = frontmatter;
+  const { title, date_created, date_updated, tags, hidden } = frontmatter;
 
   if (!title) {
     throw new Error("Post frontmatter is missing title");
@@ -63,8 +76,15 @@ function parseFrontmatter(frontmatter: PostFrontmatter): {
   const normalizedTags = normalizeTags(tags);
   const dateCreated = date_created;
   const dateUpdated = date_updated || date_created;
+  const normalizedHidden = normalizeHidden(hidden);
 
-  return { title, dateCreated, dateUpdated, tags: normalizedTags };
+  return {
+    title,
+    dateCreated,
+    dateUpdated,
+    tags: normalizedTags,
+    hidden: normalizedHidden,
+  };
 }
 
 function createExcerpt(markdown: string, maxLength = 220): string {
@@ -95,6 +115,7 @@ function readPost(slug: string): Post {
     tags: meta.tags,
     content,
     excerpt,
+    hidden: meta.hidden,
   };
 }
 
