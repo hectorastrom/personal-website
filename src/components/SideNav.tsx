@@ -1,26 +1,20 @@
 "use client";
 
-import Handles from "./Handles1";
 import NavLinks from "./NavLinks";
 import NameTitle from "./NameTitle";
-import MeImg from "./MeImg";
+import SocialLinks from "./SocialLinks";
 
 export default function SideNav() {
   return (
     <>
-      <div className="grid grid-rows-10 grid-flow-col gap-y-0">
-        <div className="row-span-4">
-          <MeImg/>
-        </div>
-        <div className="mt-1 text-center">
+      <div className="flex flex-col items-start">
+        <div className="mt-1">
           <NameTitle link={true} />
         </div>
-        <div className="row-span-1 -mt-2">
-          <Handles />
-        </div>
-        <div className="row-span-4 -mt-4">
+        <div className="mt-2">
           <NavLinks layout="side" />
         </div>
+        <SocialLinks variant="side" />
       </div>
     </>
   );

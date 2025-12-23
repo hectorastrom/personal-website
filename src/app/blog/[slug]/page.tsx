@@ -53,6 +53,14 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
       <div className="pt-2">
         <MarkdownContent content={post.content} />
       </div>
+      <div className="pt-6">
+        <Link
+          href="/blog"
+          className={`text-sm text-slate-500 hover:text-slate-700 ${emphasisFont.className}`}
+        >
+          ← Back to blog
+        </Link>
+      </div>
     </article>
   );
 }

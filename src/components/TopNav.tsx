@@ -1,32 +1,20 @@
 "use client";
 
-import Handles from "./Handles1";
 import NavLinks from "./NavLinks";
 import NameTitle from "./NameTitle";
-import MeImg from "./MeImg";
+import SocialLinks from "./SocialLinks";
 
 export default function TopNav() {
   return (
-    <div className="w-full bg-slate-50 shadow-lg p-4 grid grid-cols-4 items-center z-50">
-      {/* Image Section */}
-      <div className="row-span-2 col-span-1 flex justify-center">
-        <MeImg/>
-      </div>
-
-      {/* Name and Handles Section */}
-      <div className="ml-2 mb-2 mt-3 col-span-3 flex flex-col justify-center">
-        <div className="flex flex-wrap sm:flex-row items-center justify-between w-full">
-          <NameTitle link={true}/>
-          <div className="mb-1">
-            <Handles />
-          </div>
-        </div>
-
-        {/* Navigation Links Section */}
-        <div className="w-full">
+    <div className="w-full bg-slate-50 shadow-lg px-4 py-3 flex items-start justify-between gap-4 z-50">
+      <div className="flex flex-col justify-start">
+        <NameTitle link={true} />
+        <div className="mt-2">
           <NavLinks layout="top" />
         </div>
       </div>
+
+      <SocialLinks variant="top" />
     </div>
   );
 }
