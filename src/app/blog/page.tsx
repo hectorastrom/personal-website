@@ -48,7 +48,7 @@ export default function BlogPage() {
                     key={post.slug}
                     href={`/blog/${post.slug}`}
                     className="flex items-center justify-between rounded-lg px-2 py-2 transition-colors duration-200 hover:bg-slate-100"
-                    tabindex={index+1}
+                    tabIndex={index+1}
                   >
                     <span className="text-2xl font-bold text-body hover:text-emphasis">
                       {post.title}
