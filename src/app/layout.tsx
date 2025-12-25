@@ -23,7 +23,7 @@ export default function RootLayout({
         <div className="px-10 pb-24 mt-24 grid grid-rows-auto md:grid-cols-[max-content,minmax(0,48rem)] md:justify-center md:gap-x-12 max-w-full">
           <ResponsiveNav className="self-start" />
           <main className="self-start pb-6 md:pl-4 pl-0">
-            <div className=" mt-16 md:mt-16">
+            <div className=" mt-8 md:mt-16">
               {children}
             </div>
           </main>
