@@ -1,5 +1,6 @@
 import React from "react";
 import NameTitle from "@/components/NameTitle";
+import Image from "next/image"
 import Link from "next/link";
 import { emphasisFont } from "@/lib/fonts";
 import LastUpdated from "@/components/LastUpdated";
@@ -16,9 +17,11 @@ export default async function Home() {
         </div>
 
         <div>
-          <img
-            src="images/me_hiking.jpg"
+          <Image
+            src="/images/me_hiking.jpg"
             alt="Hiking to Mount Madison"
+            width={320}
+            height={240}
             className="hidden lg:block float-right object-cover rounded-sm shadow-lg max-w-xs w-full ml-12 mb-2 mr-2"
           />
 

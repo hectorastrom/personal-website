@@ -1,0 +1,101 @@
+[
+    {
+      "id": "circa",
+      "image_path": "circa_logo.svg",
+      "name": "Circa",
+      "date": "2024",
+      "description": "Online learning platform emphasizing conceptual understanding through text-embedding transformer models.",
+      "tags": [
+        "HuggingFace",
+        "FastAPI",
+        "PyTorch",
+        "MongoDB",
+        "OpenAI",
+        "Next.js",
+        "React"
+      ],
+      "status": "on pause",
+      "github": "https://github.com/orgs/CircaLearn/repositories",
+      "role": "Software Engineer",
+      "overview": [
+        "Circa is a flashcard-based learning platform designed to enhance conceptual understanding by discouraging rote memorization.",
+        "The platform utilizes a Next.js frontend and a MongoDB NoSQL backend, capable of supporting thousands of users.",
+        "To evaluate a user's conceptual understanding, Circa quizzes users with items they're trying to learn, such as new words (e.g. prescience) or concepts (e.g. Gauss's Law). Users may choose to respond with text or speech, which is then processed using a HuggingFace Wav2Vec2 speech-to-text model. User responses are then embedded and semantically compared to the correct answers provided during setup to accurately assess understanding.",
+        "Users have the option to discuss each concept they're trying to learn with a personalized LLM, equipped with an understanding of each users' goal and learning style.",
+        "All of this processing is done on Circa's backend, which can be quickly accessed using a Python FastAPI server request.",
+        "The primary goal of Circa is to shift the focus of learning platforms, such as Quizlet, from mere memorization towards genuine understanding.",
+        "Until Circa is finished, I recommend 'Knowt.com'."
+      ]
+    },
+    {
+      "id": "tim",
+      "image_path": "tim.png",
+      "ss_path": "tim169_ss.png",
+      "name": "Text into Music",
+      "date": "2023",
+      "description": "Web app that layers bespoke audio soundscapes to your books.",
+      "tags": [
+        "OpenAI",
+        "React",
+        "HuggingFace",
+        "PyTorch",
+        "Kaggle",
+        "Spotify-API"
+      ],
+      "status": "sunset",
+      "github": "https://github.com/Brotherswords/HackMIT2023",
+      "hackathon_page": "https://devpost.com/software/tim-text-into-music",
+      "role": "ML Engineer, Backend Developer",
+      "overview": [
+        "TiM (Text Into Music) is a revolutionary platform that adds bespoke soundtracks to your books. A React-built web app allows users to upload their favorite books so that our ML model will automatically map the text on each page to a suitable Spotify track, playing it live while users read. ",
+        "We initially trained a sentiment analysis NLP model based on synthetic data from GPT-3.5 (text to sentiment label prompt) to match text with songs. We aimed to pair this model with Kaggle's MuSe dataset to find songs from these labels. However, given our limited training data and time, this model performed inadequately.",
+        "At the last minute, we pivoted to using a version of the RoBERTa sentiment analysis base model from HuggingFace. We mapped the emotional outputs of this model to labels used by the Spotify API to classify songs' sentiments, allowing us to select music tailored to each page.",
+        "In the future, we'd like to explore generating music through diffusion models like Stable Audio for an even more tailored and adaptable audio experience."
+      ],
+      "note": "TiM was developed as part of HackMIT 2023, MIT's 24 hour hackathon.",
+      "team": [
+        { "Alec Wang": "Frontend Dev" },
+        { "Emma Qin": "ML Engineer" },
+        { "Lavan Viv.": "Frontend Dev" }
+      ]
+    },
+    {
+      "id": "stud",
+      "image_path": "stud.png",
+      "ss_path": "stud169_ss.png",
+      "name": "stud",
+      "date": "2023",
+      "description": "Web app and chrome extension for building smarter study habits.",
+      "status": "sunset",
+      "tags": ["Next.js", "Tailwind", "Firebase", "Chrome-API"],
+      "github": "https://github.com/albertastrom/stud",
+      "hackathon_page": "https://devpost.com/software/stud-the-study-bud",
+      "role": "Backend Developer",
+      "overview": [
+        "stud is a web app and Chrome extension that optimizes study sessions with a balanced approach of focus and rest.",
+        "By setting work time goals and using a flexible timer system, stud encourages a disciplined study routine.",
+        "The extension tracks time on browser tabs, classifying them as productive or unproductive to keep users on track.",
+        "At the end of sessions, users can review productivity metrics and access reports to improve study habits."
+      ],
+      "note": "stud was developed as part of HackHarvard 2023, Harvard's 36-hour hackathon.",
+      "team": [
+        { "Albert Astrom": "Backend Dev" },
+        { "Eli Olcott": "Fullstack Dev" },
+        { "Jude Partovi": "Frontend Dev" }
+      ]
+    },
+    {
+      "id": "portfolio",
+      "image_path": "borderless_portfolio.svg",
+      "name": "This Website",
+      "date": "2024 - Present",
+      "description": "Active Next.js & React portfolio site.",
+      "tags": ["Next.js", "React", "Tailwind"],
+      "status": "ongoing",
+      "github": "https://github.com/hectorastrom/personal-website",
+      "role": "Software Engineer",
+      "overview": [
+        "My personal portfolio website, featuring my past projects, work experience, and blog."
+      ]
+    }
+]

@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
 import { emphasisFont } from "@/lib/fonts";
 
 interface Project {
@@ -17,16 +16,12 @@ interface ProjectsListProps {
 }
 
 export default function ProjectsList({ projects }: ProjectsListProps) {
-  const [showAll, setShowAll] = useState(false);
-  
-  const displayedProjects = showAll ? projects : projects.slice(0, 5);
-  const hasMoreProjects = projects.length > 5;
 
   return (
     <div className="relative">
       {/* Projects list */}
       <div className="space-y-0">
-        {displayedProjects.map((project, index) => (
+        {projects.map((project, index) => (
           <div key={project.id} className="relative">
             <Link
               href={`/projects/${project.id}`}
@@ -55,21 +50,12 @@ export default function ProjectsList({ projects }: ProjectsListProps) {
                 </span>
               </div>
             </Link>
-            
-            {index < displayedProjects.length - 1 && (
+
+            {index < projects.length - 1 && (
               <div className="h-px bg-gray-200 dark:bg-gray-700 mx-2 mt-2"></div>
             )}
           </div>
         ))}
-        
-        {hasMoreProjects && !showAll && (
-          <button
-            onClick={() => setShowAll(true)}
-            className="w-full text-center py-3 text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition-colors duration-200 font-medium"
-          >
-            • • •
-          </button>
-        )}
       </div>
     </div>
   );
