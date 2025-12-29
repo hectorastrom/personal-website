@@ -123,7 +123,11 @@ export function getAllPosts(): Post[] {
   const slugs = getPostDirectories();
   return slugs
     .map((slug) => readPost(slug))
-    .sort((a, b) => (a.dateCreated > b.dateCreated ? -1 : 1));
+    .sort((a, b) => {
+      const dateA = new Date(a.dateCreated).getTime();
+      const dateB = new Date(b.dateCreated).getTime();
+      return dateB - dateA;
+    });
 }
 
 export function getAllPostMetas(): PostMeta[] {

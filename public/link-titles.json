@@ -1,0 +1,20 @@
+{
+  "https://example.com": "Example Domain",
+  "https://example.com/": "Example Domain",
+  "https://www.nobelprize.org/prizes/medicine/1945/fleming/biographical/": "Sir Alexander Fleming &#8211; Biographical - NobelPrize.org",
+  "https://www.nobelprize.org/prizes/medicine/1945/fleming/biographical": "Sir Alexander Fleming &#8211; Biographical - NobelPrize.org",
+  "https://www.worldfoodprize.org/en/dr_norman_e_borlaug/about_norman_borlaug/": "About Norman Borlaug - The World Food Prize - Improving the Quality, Quantity and Availability of Food in the World",
+  "https://www.worldfoodprize.org/en/dr_norman_e_borlaug/about_norman_borlaug": "About Norman Borlaug - The World Food Prize - Improving the Quality, Quantity and Availability of Food in the World",
+  "https://www.bbc.co.uk/history/historic_figures/jenner_edward.shtml": "BBC - History - Edward Jenner",
+  "https://www.bbc.co.uk/history/historic_figures/jenner_edward.shtml/": "BBC - History - Edward Jenner",
+  "https://www.nobelprize.org/prizes/chemistry/2024/jumper/facts/": "John Jumper &#8211; Facts &#8211; 2024 - NobelPrize.org",
+  "https://www.nobelprize.org/prizes/chemistry/2024/jumper/facts": "John Jumper &#8211; Facts &#8211; 2024 - NobelPrize.org",
+  "https://deepmind.google/blog/tackling-multiple-tasks-with-a-single-visual-language-model/": "Tackling multiple tasks with a single visual language model - \n        Google DeepMind",
+  "https://deepmind.google/blog/tackling-multiple-tasks-with-a-single-visual-language-model": "Tackling multiple tasks with a single visual language model - \n        Google DeepMind",
+  "https://arxiv.org/abs/1810.04805": "[1810.04805] BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+  "https://arxiv.org/abs/1810.04805/": "[1810.04805] BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding",
+  "https://hectorastrom.com/projects/lucid": "Hector Project&#x27;s - Lucid Labs",
+  "https://hectorastrom.com/projects/lucid/": "Hector Project&#x27;s - Lucid Labs",
+  "https://www.sciencedirect.com/science/article/pii/S0960982218315513": "Electroencephalography - ScienceDirect",
+  "https://www.sciencedirect.com/science/article/pii/S0960982218315513/": "Electroencephalography - ScienceDirect"
+}
